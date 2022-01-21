@@ -1,6 +1,6 @@
 {pkgs,...}:
 {
-	home.packages = with pkgs.haskellPackages; [
+  home.packages = with pkgs.haskellPackages; [
     cabal-install
     haskell.compiler.ghc921
     apply-refact
@@ -13,5 +13,5 @@
     profiteur
     profiterole
     stylish-haskell
-	];
+  ];
 }

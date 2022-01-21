@@ -11,16 +11,16 @@
       enable = true;
 
       extraConfig = ''
-				set number
-				set expandtab
-				set tabstop=2
-				set softtabstop=2
-				set shiftwidth=2
-				set mouse=a
-				set clipboard=unnamed
-				set incsearch
+        set number
+        set expandtab
+        set tabstop=2
+        set softtabstop=2
+        set shiftwidth=2
+        set mouse=a
+        set clipboard=unnamed
+        set incsearch
 
-				imap fd <Esc>
+        imap fd <Esc>
       '';
 
       plugins = with pkgs.vimPlugins; [

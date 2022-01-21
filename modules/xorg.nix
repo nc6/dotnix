@@ -1,5 +1,5 @@
 { pkgs, lib, ...}:{
-	services.betterlockscreen = {
+  services.betterlockscreen = {
     enable = true;
   };
 
