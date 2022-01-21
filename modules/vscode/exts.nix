@@ -128,8 +128,8 @@
 {
   name = "rewrap";
   publisher = "stkb";
-  version = "17.2.0";
-  sha256 = "0yrhc0jcwc00j3mvafnj69bj5aly38lmxd7pcfh3p45m9w9c00gr";
+  version = "17.3.0";
+  sha256 = "1nzg029wk0hh4n51m44snh3wcz6yhwgx3lqxx0vjmhkv3iidpg7x";
 }
 {
   name = "org-mode";
