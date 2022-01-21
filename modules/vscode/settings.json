@@ -159,7 +159,7 @@
         "**/*.olean": true
     },
     "editor.cursorStyle": "line",
-    "editor.insertSpaces": false,
+    "editor.insertSpaces": true,
     "editor.lineNumbers": "on",
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
