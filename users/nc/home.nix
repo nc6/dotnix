@@ -4,6 +4,7 @@
   imports = [
     (import ../../modules/alacritty.nix)
     (import ../../modules/bash)
+    (import ../../modules/git.nix)
     (import ../../modules/haskell.nix)
     (import ../../modules/neovim.nix)
     (import ../../modules/vscode)
@@ -25,9 +26,6 @@
     binutils
     clang
     fasd
-    git
-    git-lfs
-    gitAndTools.gh
     gnumake
     ispell
     niv
