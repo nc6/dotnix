@@ -22,6 +22,8 @@
 
     # Develpoment tools
     ag
+    binutils
+    clang
     fasd
     git
     git-lfs
@@ -29,8 +31,6 @@
     gnumake
     ispell
     niv
-    pkgs.binutils
-    pkgs.clang
     zeal
 
     # Graphics
@@ -51,23 +51,18 @@
     # R
     R
 
-    # Rust
-    # pkgs.rustChannels.nightly.rust
-
     # System
-    cachix
     alsaUtils
-    autojump
+    cachix
     desktop-file-utils
     feh
     gnupg
     libgnome-keyring
     mosh
     networkmanagerapplet
-    pavucontrol
     p7zip
+    pavucontrol
     ranger
-    thunderbird
     tmate
     tmux
     udiskie
