@@ -2,6 +2,7 @@
 
 {
   imports = [
+    (import ../../modules/alacritty.nix)
     (import ../../modules/haskell.nix)
     (import ../../modules/neovim.nix)
     (import ../../modules/vscode)
@@ -54,7 +55,6 @@
 
     # System
     cachix
-    alacritty # Fast terminal?
     alsaUtils
     autojump
     desktop-file-utils
