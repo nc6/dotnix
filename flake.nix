@@ -30,9 +30,28 @@
     ];
   };
 
+  varda = nixpkgs.lib.nixosSystem {
+    system = "x86_64-linux";
+    modules = [
+      ./hosts/varda/configuration.nix
+      home-manager.nixosModules.home-manager
+      {
+        nixpkgs.config = {
+          allowUnfree = true;
+        };
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.users.nc = import ./users/nc/home.nix;
+
+        # Optionally, use home-manager.extraSpecialArgs to pass
+        # arguments to home.nix
+      }
+    ];
+  };
+
   in {
     nixosConfigurations = {
-      inherit lorien;
+      inherit lorien varda;
     };
   };
 }
