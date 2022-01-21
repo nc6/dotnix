@@ -2,6 +2,7 @@
 
 {
   imports = [
+    (import ../../modules/haskell.nix)
     (import ../../modules/neovim.nix)
     (import ../../modules/vscode)
     (import ../../modules/xorg.nix)
