@@ -146,8 +146,8 @@
 {
   name = "vspacecode";
   publisher = "VSpaceCode";
-  version = "0.10.5";
-  sha256 = "1z8pw7dxgpcn8jh1czky8ifmhlydc93mx6zic9lbkimhplpy4y9y";
+  version = "0.10.6";
+  sha256 = "1p7x8cjk35l8ip9q04ysd9m481kcb8gii4rqsrm1qhmp5g2g8v6f";
 }
 {
   name = "whichkey";
