@@ -23,7 +23,6 @@
 
     # Develpoment tools
     ag
-    binutils
     clang
     fasd
     gnumake
