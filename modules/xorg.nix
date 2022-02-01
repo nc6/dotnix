@@ -32,6 +32,9 @@
 
         "${mod}+Shift+colon" = "exec \"betterlockscreen -l dim\"";
 
+        "${mod}+Shift+greater" = "move workspace to output right";
+        "${mod}+Shift+less" = "move workspace to output left";
+
       };
 
       bars = [
