@@ -45,6 +45,9 @@
     ghostscript
     mupdf
 
+    # Organisation
+    logseq
+
     # R
     R
 
