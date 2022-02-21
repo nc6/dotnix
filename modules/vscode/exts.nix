@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.37.2022021609";
-  sha256 = "0k5xxzznpwmqiq9zv74ls0hjn3rv404gbby4gdp2xnbmpmhx0nmj";
+  version = "0.37.2022021709";
+  sha256 = "0jc4nmy18wnlsrkvqzgp33rmls84g2d734cbh2rw373h0zi9hmfs";
 }
 {
   name = "haskell";
@@ -74,14 +74,14 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.26";
-  sha256 = "1ianzapb9jyhhwx6w5czqg41l6q3cb2jijg8bpnv7a2rbb3v54m1";
+  version = "0.6.27";
+  sha256 = "1z5k65w0cs19xah76ndkw4f2bc0m9vdf0zdd9zqp0cin5mnspbad";
 }
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.2.1010480428";
-  sha256 = "02aq0nsa2dyk31s0l36s6b1kzmfj051qr94j3c0ng6qzb76mizjp";
+  version = "2022.2.1010531003";
+  sha256 = "03zcl2x1n94pcp2qc5zb50clm8710yvw0x3214sy0n15vp71qkni";
 }
 {
   name = "jupyter-keymap";
@@ -98,14 +98,14 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.75.2022021615";
-  sha256 = "1wyykawiqggzkkvw8wkz29p9ylvs023kzz58p737dnwjsf8p8r4p";
+  version = "0.75.2022021903";
+  sha256 = "1kxkkbyjw9b3999fq561c230ymfv7k8i46ccy8gyzz2lpq0nzyib";
 }
 {
   name = "remote-ssh-edit";
   publisher = "ms-vscode-remote";
-  version = "0.75.2022021615";
-  sha256 = "1cm9b4dfww425jw2cj8hn5s28h3rmgj33z8fm1cxx2sm5c2fng8y";
+  version = "0.75.2022021903";
+  sha256 = "0jdkyjd0472bna959sj3a6gm2l5i3lkw3kj4p9ifpq1pcsimba10";
 }
 {
   name = "vscode-direnv";
@@ -128,8 +128,8 @@
 {
   name = "rewrap";
   publisher = "stkb";
-  version = "17.7.0";
-  sha256 = "1k3jd01zd6my1nnn3a05rw9vmcz0y1drx7mb6nyw315szifyzx6q";
+  version = "17.8.0";
+  sha256 = "1y168ar01zxdd2x73ddsckbzqq0iinax2zv3d95nhwp9asjnbpgn";
 }
 {
   name = "org-mode";
@@ -140,8 +140,8 @@
 {
   name = "vim";
   publisher = "vscodevim";
-  version = "1.22.1";
-  sha256 = "0hp2qw9qpp70pqblpybgpngisz98q6jk8zsabxlxy25j3hgzbhc3";
+  version = "1.22.2";
+  sha256 = "1d85dwlnfgn7d32ivza0bv1zf9bh36fx7gbi586dligkw202blkn";
 }
 {
   name = "vspacecode";
@@ -164,7 +164,7 @@
 {
   name = "material-theme";
   publisher = "zhuangtongfa";
-  version = "3.13.19";
-  sha256 = "1j99x7axa4h9250qx05r2d3yv6biiiw6275zg5b0xvkv4l8s1ff3";
+  version = "3.13.20";
+  sha256 = "0jmw8f012mqzbaivz219l4k879sishjac5475fxi93j5gip3sa80";
 }
 ]
