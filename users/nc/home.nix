@@ -22,7 +22,7 @@
     zoom-us
 
     # Develpoment tools
-    ag
+    silver-searcher
     clang
     fasd
     gnumake
