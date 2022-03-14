@@ -20,6 +20,7 @@
     signal-desktop
     tdesktop
     zoom-us
+    zotero
 
     # Develpoment tools
     silver-searcher
