@@ -49,9 +49,19 @@
     ];
   };
 
+  build01 = home-manager.lib.homeManagerConfiguration rec {
+    system = "x86_64-linux";
+    username = "nc";
+    homeDirectory = "/home/nc";
+    configuration = import ./users/nc/home.nix;
+  };
+
   in {
     nixosConfigurations = {
       inherit lorien varda;
     };
+    homeConfigurations = {
+      inherit build01;
+    }
   };
 }
