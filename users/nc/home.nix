@@ -80,6 +80,11 @@
     enableSshSupport = true;
   };
 
+  services.syncthing = {
+    enable = true;
+    tray.enable = true;
+  };
+
   home.sessionVariables = {
     EDITOR = "${pkgs.neovim}/bin/nvim";
     TERMINAL = "${pkgs.alacritty}/bin/alacritty";

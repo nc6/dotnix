@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.39.2022032409";
-  sha256 = "16jgzry9ph3xjqsrs7s0gymb1vhqb8a4v2hda5b782ry5qyrsj6f";
+  version = "0.39.2022032809";
+  sha256 = "0j18849xwrrs9zj4328flk4cczrx63x3k48jfng1gxvvhjhwjffn";
 }
 {
   name = "haskell";
@@ -80,8 +80,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.3.1000861006";
-  sha256 = "1w690w2ivqsbzfq1k1hji28yr6jvag15sp616lq381wa5a2k5yc9";
+  version = "2022.4.1000891004";
+  sha256 = "18qb153m8n7dnpr290nririmv55gmb6l2ca4p1imd5snr3xlq4rd";
 }
 {
   name = "jupyter-keymap";
@@ -110,8 +110,8 @@
 {
   name = "direnv";
   publisher = "mkhl";
-  version = "0.6.0";
-  sha256 = "1yd3daj302gjmy06pdm7rmy5jch5j55h9ghkcavhvgi4df20dcvl";
+  version = "0.6.1";
+  sha256 = "1d60hqww1innch277yd3va2snpsp19c7w4v0rxz2jvzvgykfmx77";
 }
 {
   name = "scala";
