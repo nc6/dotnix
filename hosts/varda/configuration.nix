@@ -52,10 +52,6 @@
     daemon.enable = true;
   };
 
-  # Sound
-  hardware.pulseaudio.enable = true;
-  sound.mediaKeys.enable = true;
-
   # Settings needed for steam
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;

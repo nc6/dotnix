@@ -28,10 +28,6 @@
     drivers = [ pkgs.epson-escpr ];
   };
 
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
   # Anti-virus
   services.clamav = {
     updater.enable = true;

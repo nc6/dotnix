@@ -62,6 +62,6 @@
     };
     homeConfigurations = {
       inherit build01;
-    }
+    };
   };
 }

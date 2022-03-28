@@ -1,7 +1,8 @@
 {...}:
 {
   imports =
-    [ # Include cachix caches
+    [ ./audio.nix
+      # Include cachix caches
       ./cachix.nix
       ./fonts.nix
       ./keyring.nix
