@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs.haskellPackages; [
     cabal-install
-    pkgs.haskell.compiler.ghc921
+    pkgs.haskell.compiler.ghc922
     apply-refact
     # friendly
     ghcid
@@ -10,8 +10,8 @@
     hlint
     hoogle
     ormolu
-    profiteur
-    profiterole
+    # profiteur
+    # profiterole
     stylish-haskell
   ];
 }
