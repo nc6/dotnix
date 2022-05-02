@@ -22,4 +22,4 @@ while getopts "uv" options; do
   esac
 done
 
-sudo nixos-rebuild switch --flake .#$HOST
+nixos-rebuild switch --use-remote-sudo --flake .#$HOST
