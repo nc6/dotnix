@@ -53,12 +53,12 @@
     enable = true;
   };
 
-  xsession.enable = true;
-  xsession.pointerCursor = {
+  home.pointerCursor = {
     package = pkgs.gnome.adwaita-icon-theme;
     name = "Adwaita";
     size = 28;
   };
+  xsession.enable = true;
   xsession.windowManager.i3 = {
     enable = true;
     config = let mod = "Mod4"; in {
