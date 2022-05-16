@@ -29,6 +29,7 @@
     gnumake
     ispell
     niv
+    nix-prefetch-git
     zeal
 
     # Graphics
