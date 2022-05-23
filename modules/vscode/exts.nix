@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.43.2022051609";
-  sha256 = "0s5a8m0qajj009ifcy4anb3mrp0qkxksjkx8dfr9iqqvi56y57bg";
+  version = "0.43.2022052309";
+  sha256 = "0wrhd1384m5qmvs2dwqfgg50sgs63ihhcpv163k2ca04jp1wnrvm";
 }
 {
   name = "haskell";
@@ -80,8 +80,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.5.1001381015";
-  sha256 = "0xjsyn99pxsh0p95g2jn2j1py2h2qd7ydk0c61z1kqj309rd065a";
+  version = "2022.5.1001451024";
+  sha256 = "134ralhyrznpz7x57s5vsp0k6ax2flwvmcxg5sydlv9c78c8kddy";
 }
 {
   name = "jupyter-keymap";
@@ -98,8 +98,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.81.2022051115";
-  sha256 = "1g1hhm837942ywp2zxdfdf7gp42yycp4cclv609bf8c4vz2lg3dm";
+  version = "0.81.2022052315";
+  sha256 = "13144fg4bj2d2vc8c85psbxs2g1rdvcna2bba8h276qga1lxpacm";
 }
 {
   name = "remote-ssh-edit";
