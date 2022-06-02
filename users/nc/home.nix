@@ -68,6 +68,7 @@
     tmate
     tmux
     udiskie
+    wally-cli
 
   ];
 
