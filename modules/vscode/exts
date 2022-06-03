@@ -8,15 +8,16 @@ GitHub.vscode-pull-request-github
 haskell.haskell
 jacobdufault.fuzzy-search
 James-Yu.latex-workshop
+jnoortheen.nix-ide
 jq-syntax-highlighting.jq-syntax-highlighting
 justusadam.language-haskell
 kahole.magit
+mkhl.direnv
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
-mkhl.direnv
 scala-lang.scala
 sjurmillidahl.ormolu-vscode
 stkb.rewrap
