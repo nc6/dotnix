@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.43.2022060209";
-  sha256 = "1lazmj0wi2bcmvgi2xva0m7k76saf4vs1b0pi5wldy3m9zqzwfhg";
+  version = "0.43.2022060709";
+  sha256 = "18hk0bl0cbgrd4bddd4yiqcsij35q6mfb0rv19yk1k3pk762kw39";
 }
 {
   name = "haskell";
@@ -56,8 +56,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "8.26.0";
-  sha256 = "1isgrxr71ylqzhg133mknkr57pf2jgx25lx17qsn5304ccs1n8b4";
+  version = "8.27.0";
+  sha256 = "1xd2b3fldc9p8k005dx9lkyyrqmwkfibgv8ia9z38y7f967q1yww";
 }
 {
   name = "nix-ide";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.5.1001552309";
-  sha256 = "06qsplka0695awk39na23kg1sr1iqc7pr2md9rd059f1fbdn3na4";
+  version = "2022.6.1001601017";
+  sha256 = "1lspyswch75mhkhbphyc12kwaixicjjgsnd7dsb7fg04ag73bgmb";
 }
 {
   name = "jupyter-keymap";
