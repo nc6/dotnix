@@ -11,7 +11,7 @@
       }
 
       function ghci9with () {
-        nix-shell -p "haskell.packages.ghc921.ghcWithPackages (pkgs: with pkgs; [$*])" --run ghci
+        nix-shell -p "haskell.packages.ghc923.ghcWithPackages (pkgs: with pkgs; [$*])" --run ghci
       }
 
       eval "$(fasd --init auto)"
