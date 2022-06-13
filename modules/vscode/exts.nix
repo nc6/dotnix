@@ -120,6 +120,18 @@
   sha256 = "0zgrd2909xpr3416cji0ha3yl6gl2ry2f38bvx4lsjfmgik0ic6s";
 }
 {
+  name = "ide-purescript";
+  publisher = "nwolverson";
+  version = "0.25.12";
+  sha256 = "1f9064w18wwp3iy8ciajad8vlshnzyhnqy8h516k0j5bflz781mn";
+}
+{
+  name = "language-purescript";
+  publisher = "nwolverson";
+  version = "0.2.8";
+  sha256 = "1nhzvjwxld53mlaflf8idyjj18r1dzdys9ygy86095g7gc4b1qys";
+}
+{
   name = "scala";
   publisher = "scala-lang";
   version = "0.5.5";
