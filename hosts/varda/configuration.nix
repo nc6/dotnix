@@ -63,7 +63,6 @@
     };
 
     dpi = 144;
-    layout = "gb";
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.

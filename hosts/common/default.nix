@@ -8,6 +8,7 @@
       ./keyring.nix
       ./nix.nix
       ./packages.nix
+      ./udev.nix
       ./users.nix
       ./xserver.nix
     ];
