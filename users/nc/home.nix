@@ -11,6 +11,8 @@
     (import ../../modules/xorg.nix)
   ];
 
+  home.stateVersion = "18.09";
+
   home.packages = with pkgs; [
 
     # Web stuff
