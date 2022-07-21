@@ -1,19 +1,34 @@
 #!/usr/bin/env bash
 
 HOST=$(hostname)
+AUTOCOMMIT_MSG="Routine update"
+
 usage() {
-  echo "Usage: $0 [ -u ] [ -v ] " 1>&2
+  echo "Usage: $0 [ -u ] [ -v ] [ -n ]" 1>&2
 }
 
 echo "Updating $HOST"
 
-while getopts "uv" options; do
+if [ -z "$(git status --porcelain)" ]; then
+  # Working directory clean
+  AUTOCOMMIT=true
+else
+  # Uncommitted changes
+  AUTOCOMMIT=false
+fi
+
+while getopts "uvc" options; do
   case "${options}" in
     u)
       nix flake update
       ;;
     v)
       $(cd modules/vscode && cat exts | ./update_exts.sh > exts.nix)
+      AUTOCOMMIT_MSG="${AUTOCOMMIT_MSG}\n\nUpdated VSCode plugins"
+      ;;
+    n)
+      # Disable autocommit even on a clean repo
+      AUTOCOMMIT=false
       ;;
     *)
       usage
@@ -23,3 +38,9 @@ while getopts "uv" options; do
 done
 
 nixos-rebuild switch --use-remote-sudo --flake .#$HOST
+
+if [ "$AUTOCOMMIT" == true ]; then
+  git add flake.lock modules/vscode
+  git commit -m $AUTOCOMMIT_MSG
+  git push
+fi
