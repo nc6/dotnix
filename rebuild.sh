@@ -41,6 +41,6 @@ nixos-rebuild switch --use-remote-sudo --flake .#$HOST
 
 if [ "$AUTOCOMMIT" == true ]; then
   git add flake.lock modules/vscode
-  git commit -m $AUTOCOMMIT_MSG
+  git commit -m "$AUTOCOMMIT_MSG"
   git push
 fi
