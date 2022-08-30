@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "12.1.2";
-  sha256 = "0wpmfrfpi6wl9v3dknx2qr2m74azpcw8bvhac21v67w6jxnl3jd9";
+  version = "12.2.0";
+  sha256 = "070v27i7cd72a6pnn6r9qzh75b8czsrykcj68842i3h42gfa8jk4";
 }
 {
   name = "EditorConfig";
