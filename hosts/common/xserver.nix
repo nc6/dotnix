@@ -3,7 +3,7 @@
 	# Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    layout = "gb";
+    layout = "eu";
     xkbOptions = "eurosign:e";
 
     inputClassSections = [
@@ -18,7 +18,7 @@
         Identifier "moonlander"
         MatchIsKeyboard "on"
         MatchProduct "Moonlander"
-        Option "XkbLayout" "us"
+        Option "XkbLayout" "eu"
         Option "XkbVariant" "basic"
       ''
     ];
