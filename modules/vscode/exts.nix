@@ -14,8 +14,8 @@
 {
   name = "vscode-jq-playground";
   publisher = "davidnussio";
-  version = "4.3.2";
-  sha256 = "09k12di1pgb476hk37xnj4shrr2w8kp75wbl9wnmdvb1gfymxvvd";
+  version = "4.3.4";
+  sha256 = "1jcyrq4idhd9wgqadrh6p7za2l0l19kgwv0xncpa4za1fmylwf39";
 }
 {
   name = "gitlens";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.51.2022090709";
-  sha256 = "1pjkvmnmbw4cz8w1icbqlajz7c3bgv1nlcx4gm87y8pf14vg7spr";
+  version = "0.51.2022091309";
+  sha256 = "0mcslhrbm0xqzf6jzz80is2kkqabjc4z2z07mav03c1fdbnnmrin";
 }
 {
   name = "haskell";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.9.1002521044";
-  sha256 = "1q8cffh2m2liri2xnmk4h7mx29fbhj8fhl3fz74igyp1wy49i6g0";
+  version = "2022.9.1002601105";
+  sha256 = "159r96k0jqpgdpkk9xm8gb670202lcrfw010wv0jdzpc81dz4nd1";
 }
 {
   name = "jupyter-keymap";
