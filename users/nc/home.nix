@@ -56,7 +56,7 @@
     R
 
     # System
-    alsaUtils
+    alsa-utils
     cachix
     desktop-file-utils
     feh

@@ -6,7 +6,7 @@
     htop
     neovim
     pinentry
-    pinentry_gnome
+    pinentry-gnome
     wget
   ];
 }
