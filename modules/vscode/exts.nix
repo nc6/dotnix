@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.10.1002821042";
-  sha256 = "1f0afib1w9lwykpwb581c7l1aa1h43c9z4q4hd80f5kbii25jv7h";
+  version = "2022.10.1002851049";
+  sha256 = "1155vx53p2aa1z4699pjkjz9cvvbd8fgqnw2zywyfw6lzx730fxn";
 }
 {
   name = "jupyter-keymap";
