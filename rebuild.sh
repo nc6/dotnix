@@ -17,7 +17,7 @@ else
   AUTOCOMMIT=false
 fi
 
-while getopts "uvc" options; do
+while getopts "uvn" options; do
   case "${options}" in
     u)
       nix flake update

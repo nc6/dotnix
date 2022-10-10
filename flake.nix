@@ -11,8 +11,10 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager }: let
 
+  system = "x86_64-linux";
+
   lorien = nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
+    inherit system;
     modules = [
       ./hosts/lorien/configuration.nix
       home-manager.nixosModules.home-manager
@@ -31,7 +33,7 @@
   };
 
   varda = nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
+    inherit system;
     modules = [
       ./hosts/varda/configuration.nix
       home-manager.nixosModules.home-manager
@@ -50,7 +52,7 @@
   };
 
   build01 = home-manager.lib.homeManagerConfiguration rec {
-    system = "x86_64-linux";
+    inherit system;
     username = "nc";
     homeDirectory = "/home/nc";
     configuration = import ./users/nc/home.nix;
@@ -62,6 +64,13 @@
     };
     homeConfigurations = {
       inherit build01;
+    };
+
+    devShells.${system}.default = let pkgs = nixpkgs.legacyPackages.${system}; in
+      pkgs.mkShell {
+        buildInputs = with pkgs; [
+          just
+        ];
     };
   };
 }
