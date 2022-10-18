@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2022.8.3105";
-  sha256 = "11axaxi06j0hb9xv35azqy4fys15pllg67gk3sqsc3s66q4qzk6w";
+  version = "2022.10.1805";
+  sha256 = "1sm7bjdsp6qc9pw3v5hd3prc32wb83gwam5sligd1fvym82yhafs";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.53.2022100609";
-  sha256 = "0zvqldblg1j9jc0v9xfx84abkbsdmfmh14sz2ghicw52r4s3lv0m";
+  version = "0.53.2022101809";
+  sha256 = "0lj0q3p546gx52skay8dvimpfszlrlzamshqs601p81nyc7qfcf2";
 }
 {
   name = "haskell";
@@ -62,8 +62,8 @@
 {
   name = "nix-ide";
   publisher = "jnoortheen";
-  version = "0.1.23";
-  sha256 = "0i5zqfz2ic57z9b4v6mrs68dzhvgpnr5984srjapi0nzm30k127b";
+  version = "0.2.1";
+  sha256 = "0bibb3r4cb7chnx6vpyl41ig12pc0cbg0sb8f2khs52c71nk4bn8";
 }
 {
   name = "jq-syntax-highlighting";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.10.1002851049";
-  sha256 = "1155vx53p2aa1z4699pjkjz9cvvbd8fgqnw2zywyfw6lzx730fxn";
+  version = "2022.10.1102922209";
+  sha256 = "1yl6h342k0sv2dnlq8cxw7llm50jsq31kcisp9y86gq25xidmvqm";
 }
 {
   name = "jupyter-keymap";
@@ -104,14 +104,14 @@
 {
   name = "jupyter-renderers";
   publisher = "ms-toolsai";
-  version = "1.0.10";
-  sha256 = "0jkrc96q3c8qbp5d5c4h9djarxzfzcfxs8ydaz21iy2han2dbami";
+  version = "1.0.11";
+  sha256 = "0r0r36v1zg36vb9b4dm8q6rj592w53s297akz2qc74vsa475arbb";
 }
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.87.2022100615";
-  sha256 = "0vqxb66q4f67fql9ik93jlgafzrmsr5capy7lf4sl343fp6lqgdm";
+  version = "0.90.1";
+  sha256 = "19lrw5107d1ji80g6pm98213gfsryg6qdl5y5f360dny31p38pn4";
 }
 {
   name = "remote-ssh-edit";
@@ -122,8 +122,8 @@
 {
   name = "ide-purescript";
   publisher = "nwolverson";
-  version = "0.25.12";
-  sha256 = "1f9064w18wwp3iy8ciajad8vlshnzyhnqy8h516k0j5bflz781mn";
+  version = "0.26.0";
+  sha256 = "0hhgfaywsjrkkkvmk215552dpxxq12pzyh80crxmdcbphm47117c";
 }
 {
   name = "language-purescript";
@@ -182,7 +182,7 @@
 {
   name = "material-theme";
   publisher = "zhuangtongfa";
-  version = "3.15.5";
-  sha256 = "0crrzpdy8fy4l1nim93qscmlpz2jhyb6hf0gh1rzqgfnk9w431xi";
+  version = "3.15.6";
+  sha256 = "0c6dwy6z3980hbf9njf8b8bvd602q2d6bflkrwqd93n9c0fa4n1d";
 }
 ]
