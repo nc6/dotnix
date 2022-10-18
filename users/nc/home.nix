@@ -7,6 +7,7 @@
     (import ../../modules/git.nix)
     (import ../../modules/haskell.nix)
     (import ../../modules/neovim.nix)
+    (import ../../modules/nushell)
     (import ../../modules/vscode)
     (import ../../modules/xorg.nix)
   ];
