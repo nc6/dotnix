@@ -19,6 +19,7 @@
       ./hosts/lorien/configuration.nix
       home-manager.nixosModules.home-manager
       {
+        nix.registry.nixpkgs.flake = inputs.nixpkgs;
         nixpkgs.config = {
           allowUnfree = true;
         };
@@ -38,6 +39,7 @@
       ./hosts/varda/configuration.nix
       home-manager.nixosModules.home-manager
       {
+        nix.registry.nixpkgs.flake = inputs.nixpkgs;
         nixpkgs.config = {
           allowUnfree = true;
         };
