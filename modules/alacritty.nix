@@ -2,6 +2,8 @@
 {
   programs.alacritty = {
     enable = true;
-    settings = {};
+    settings = {
+      shell.program = "${pkgs.nushell}/bin/nu";
+    };
   };
 }
