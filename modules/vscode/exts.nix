@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.10.1102922209";
-  sha256 = "1yl6h342k0sv2dnlq8cxw7llm50jsq31kcisp9y86gq25xidmvqm";
+  version = "2022.10.1102931121";
+  sha256 = "1ygf52nv3v0xv3ib30bhx3ldgr6sw3a9rh6q1j8dml51nzljvpk9";
 }
 {
   name = "jupyter-keymap";
@@ -148,6 +148,12 @@
   publisher = "stkb";
   version = "17.8.0";
   sha256 = "1y168ar01zxdd2x73ddsckbzqq0iinax2zv3d95nhwp9asjnbpgn";
+}
+{
+  name = "vscode-nushell-lang";
+  publisher = "TheNuProjectContributors";
+  version = "0.7.0";
+  sha256 = "06k7sc1q746q91xnnhdzlr1qs4g3g0b48rz4rq83ifvzbj88j0gq";
 }
 {
   name = "org-mode";
