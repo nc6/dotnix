@@ -232,7 +232,7 @@ let light_theme = {
 }
 
 # External completer example
-# let carapace_completer = {|spans| 
+# let carapace_completer = {|spans|
 #     carapace $spans.0 nushell $spans | from json
 # }
 
@@ -277,7 +277,11 @@ let-env config = {
 
   hooks: {
     pre_prompt: [{
-      $nothing  # replace with source code to run before the prompt is shown
+      code: "
+        let direnv = (direnv export json | from json)
+        let direnv = if ($direnv | length) == 1 { $direnv } else { {} }
+        $direnv | load-env
+      "
     }]
     pre_execution: [{
       $nothing  # replace with source code to run before the repl input is run
