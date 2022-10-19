@@ -1,7 +1,6 @@
 HOST := `hostname`
 
-default:
-  update update-vscode-plugins rebuild commit
+default: update update-vscode-plugins rebuild commit
 
 update:
   nix flake update
