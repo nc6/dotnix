@@ -96,7 +96,6 @@
     };
 
     extraConfig = ''
-      exec "setxkbmap -layout gb"
       exec "${pkgs.udiskie}/bin/udiskie --tray"
       exec "${pkgs.networkmanagerapplet}/bin/nm-applet"
     '';
