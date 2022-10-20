@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2022.10.1805";
-  sha256 = "1sm7bjdsp6qc9pw3v5hd3prc32wb83gwam5sligd1fvym82yhafs";
+  version = "2022.10.2005";
+  sha256 = "1xwcjsmdi0dzydn55k6ck0iijcmshlmhy8kc431cq471agrvld6m";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.53.2022101809";
-  sha256 = "0lj0q3p546gx52skay8dvimpfszlrlzamshqs601p81nyc7qfcf2";
+  version = "0.53.2022102009";
+  sha256 = "1lmkak34y8iwam8fhbjgzwxivsy6lzg8914dd38sqa32wv9yy1a9";
 }
 {
   name = "haskell";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.10.1102931121";
-  sha256 = "1ygf52nv3v0xv3ib30bhx3ldgr6sw3a9rh6q1j8dml51nzljvpk9";
+  version = "2022.10.1102941155";
+  sha256 = "189lcdqm2b8f5xgilbgz4d83n03s71z73ky8dbkzdi610gkfa30n";
 }
 {
   name = "jupyter-keymap";
