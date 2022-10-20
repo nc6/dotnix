@@ -15,11 +15,12 @@
 
   lorien = nixpkgs.lib.nixosSystem {
     inherit system;
+    specialArgs = { inherit inputs; };
     modules = [
       ./hosts/lorien/configuration.nix
+      ./lib/pin-nixpkgs.nix
       home-manager.nixosModules.home-manager
       {
-        nix.registry.nixpkgs.flake = inputs.nixpkgs;
         nixpkgs.config = {
           allowUnfree = true;
         };
@@ -35,11 +36,12 @@
 
   varda = nixpkgs.lib.nixosSystem {
     inherit system;
+    specialArgs = { inherit inputs; };
     modules = [
       ./hosts/varda/configuration.nix
+      ./lib/pin-nixpkgs.nix
       home-manager.nixosModules.home-manager
       {
-        nix.registry.nixpkgs.flake = inputs.nixpkgs;
         nixpkgs.config = {
           allowUnfree = true;
         };
