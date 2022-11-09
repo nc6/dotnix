@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2022.10.2605";
-  sha256 = "1kz7v9w10zd6dnhbxavcy2kns27p3nh18aq181ch5hvkbgn3140d";
+  version = "2022.11.604";
+  sha256 = "0chms5j3bpa779q2ljin8hvn7smpriy5w3brk2xilv1ly78wv71i";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.53.2022102609";
-  sha256 = "0b93mzdi8r8f7zijxyxi5kzm54lq14lh668594lnmm663xpc5bqs";
+  version = "0.55.2022110709";
+  sha256 = "025sbfiyma6pah0f5bj5b9s1qy5q62nqhi6szkj550nx6x4ra64x";
 }
 {
   name = "haskell";
@@ -56,8 +56,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "8.29.0";
-  sha256 = "0zvpn7vp6mf7i06l489gzj7sqrw3ipxfsgcig6ksdlxjvz22a44j";
+  version = "9.0.0";
+  sha256 = "18dpspy8zs8i5sdf1224b10pk5m37adqvgk1vajnnr63nr2dhw39";
 }
 {
   name = "nix-ide";
@@ -80,20 +80,20 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.33";
-  sha256 = "0cbnyx2ynr3azsidnriksccg51jx79nnqipf48nv9447w6aazfma";
+  version = "0.6.34";
+  sha256 = "0cycs9pkl9pfgxnaj28p7f0cj3jpg5nbmwv0x1rqv279yw2xgf0i";
 }
 {
   name = "direnv";
   publisher = "mkhl";
-  version = "0.6.1";
-  sha256 = "1d60hqww1innch277yd3va2snpsp19c7w4v0rxz2jvzvgykfmx77";
+  version = "0.7.0";
+  sha256 = "07kfdgrkks0500547b98mx0sy4l7f3vxspmpppaz7wjl6224zc1h";
 }
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.10.1103031027";
-  sha256 = "066gk1d3bdxajipkb8xz3cl61i6pf1p3np0azg69xqclka0yn1d4";
+  version = "2022.11.1003131031";
+  sha256 = "044gh34gpk53yb4kiacqjs5kanx3d4cw7jp3w2yh5lf2636z7b49";
 }
 {
   name = "jupyter-keymap";
@@ -110,8 +110,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.90.1";
-  sha256 = "19lrw5107d1ji80g6pm98213gfsryg6qdl5y5f360dny31p38pn4";
+  version = "0.91.2022103115";
+  sha256 = "1zr6dg44w5wj06hvw5vz0pn80z2dx5wkvdgas4brixjq4agj1zv2";
 }
 {
   name = "remote-ssh-edit";
@@ -122,8 +122,8 @@
 {
   name = "ide-purescript";
   publisher = "nwolverson";
-  version = "0.26.0";
-  sha256 = "0hhgfaywsjrkkkvmk215552dpxxq12pzyh80crxmdcbphm47117c";
+  version = "0.26.1";
+  sha256 = "1ig8z5k6gkdvxqfc0plf3dwvhz3qawydjmrln5bgsacr6jhfxi3i";
 }
 {
   name = "language-purescript";
@@ -164,8 +164,8 @@
 {
   name = "vim";
   publisher = "vscodevim";
-  version = "1.24.1";
-  sha256 = "00gq6mqqwqipc6d7di2x9mmi1lya11vhkkww9563avchavczb9sv";
+  version = "1.24.3";
+  sha256 = "02alixryryak80lmn4mxxf43izci5fk3pf3pcwy52nbd3d2fiwz1";
 }
 {
   name = "vspacecode";
