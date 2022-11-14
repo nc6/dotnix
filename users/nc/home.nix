@@ -85,6 +85,8 @@
     enableSshSupport = true;
   };
 
+  services.gnome-keyring.enable = true;
+
   services.syncthing = {
     enable = true;
   };
