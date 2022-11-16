@@ -28,12 +28,12 @@
     # Develpoment tools
     silver-searcher
     clang
-    fasd
     gnumake
     ispell
     niv
     nix-prefetch-git
     zeal
+    zoxide
 
     # Graphics
     darktable

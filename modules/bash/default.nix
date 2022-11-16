@@ -14,7 +14,7 @@
         nix-shell -p "haskell.packages.ghc924.ghcWithPackages (pkgs: with pkgs; [$*])" --run ghci
       }
 
-      eval "$(fasd --init auto)"
+      eval "$(zoxide init bash)"
     '';
   };
 }
