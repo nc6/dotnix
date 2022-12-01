@@ -14,14 +14,14 @@
 {
   name = "vscode-jq-playground";
   publisher = "davidnussio";
-  version = "4.3.4";
-  sha256 = "1jcyrq4idhd9wgqadrh6p7za2l0l19kgwv0xncpa4za1fmylwf39";
+  version = "4.3.5";
+  sha256 = "15m4dblhj2v7fx5g8vd2r5qhdh7rkchgpi86szqq4yzcrc7ldflh";
 }
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2022.11.2204";
-  sha256 = "0npr9fymfjnrq7xvfj6fdc04lysz28qncf9r8syv0w9873f3695h";
+  version = "2022.12.104";
+  sha256 = "10liz2d9ljlw4xvj44vlc1zkcvsmaqw2h70yrhq6ffbcw0049f9b";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.55.2022112809";
-  sha256 = "1birza72s5ifa6454xdqwnhfg6qgpm2k9cp1vk7mcppd2sc8ibkm";
+  version = "0.55.2022120109";
+  sha256 = "036gfgj3iyz4w3j74zhx3zh7m7rmakm2lg0h7mm11lqbpfwwrki1";
 }
 {
   name = "haskell";
@@ -80,8 +80,8 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.34";
-  sha256 = "0cycs9pkl9pfgxnaj28p7f0cj3jpg5nbmwv0x1rqv279yw2xgf0i";
+  version = "0.6.35";
+  sha256 = "128agvydif4kijcrsc4gfsbxpkk3zxa1f9mwd1slhafma1zvvhgr";
 }
 {
   name = "direnv";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.11.1003341028";
-  sha256 = "1skvmgjwlxzsw5l1kwd507ac20f137fqb1msrxgl7h1nnaz9scwp";
+  version = "2022.11.1003371924";
+  sha256 = "00s0z10vii67kq0zr2306dzfzkwac03sm3b1fqm2cfnx9vj3f4gr";
 }
 {
   name = "jupyter-keymap";
@@ -110,8 +110,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.93.2022112808";
-  sha256 = "0fhs5wvlajaa903w0c2xf0w0zz48fr4j1allwccy5d081j9zrzv4";
+  version = "0.93.2022112815";
+  sha256 = "02wiha66cj5pfysy5kxr0mdhsjzbgpmr8p94rpwd6kl57mvdmssi";
 }
 {
   name = "remote-ssh-edit";
@@ -152,8 +152,8 @@
 {
   name = "vscode-nushell-lang";
   publisher = "TheNuProjectContributors";
-  version = "0.7.0";
-  sha256 = "06k7sc1q746q91xnnhdzlr1qs4g3g0b48rz4rq83ifvzbj88j0gq";
+  version = "0.8.0";
+  sha256 = "0065ckgpsalqgv9zw8gvxxkqzwl7mjp6mydnlm1m3y9qxlfl010s";
 }
 {
   name = "org-mode";
