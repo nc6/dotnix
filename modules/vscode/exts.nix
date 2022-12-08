@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2022.12.104";
-  sha256 = "10liz2d9ljlw4xvj44vlc1zkcvsmaqw2h70yrhq6ffbcw0049f9b";
+  version = "2022.12.804";
+  sha256 = "0dhsz8bk72p0bgwdlnmvqy9xsyl9636fp2vv0jdwpcgf4g7vy2wb";
 }
 {
   name = "EditorConfig";
@@ -38,14 +38,14 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.55.2022120109";
-  sha256 = "036gfgj3iyz4w3j74zhx3zh7m7rmakm2lg0h7mm11lqbpfwwrki1";
+  version = "0.57.2022120809";
+  sha256 = "1r7c9smkqp4z0j22pi4jzcd86bj259v433qh0nvbwf4z5crxg4qa";
 }
 {
   name = "haskell";
   publisher = "haskell";
-  version = "2.2.1";
-  sha256 = "14p9g07zsb3da4ilaasgsdvh3wagfzayqr8ichsf6k5c952zi8fk";
+  version = "2.2.2";
+  sha256 = "1d5b0p6r9ipwb7j4cx9w13vq31h78bh2sfwl54xri4gyvialhryd";
 }
 {
   name = "fuzzy-search";
@@ -56,8 +56,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "9.0.1";
-  sha256 = "17v6xb614wwd3ndfnv5jiri0ya3lmgxwknil5ckx24zxwyxjfpl4";
+  version = "9.1.1";
+  sha256 = "1pl9rnw76a96cagl3jr3ww8bv2cd7swvzxbkyqcxvlsipzkg7psy";
 }
 {
   name = "nix-ide";
@@ -80,8 +80,8 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.35";
-  sha256 = "128agvydif4kijcrsc4gfsbxpkk3zxa1f9mwd1slhafma1zvvhgr";
+  version = "0.6.36";
+  sha256 = "0fkrjcw3kiggdqd81v03q80mgdv6ykckpi25mcj9jp4vz027dgg3";
 }
 {
   name = "direnv";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2022.11.1003371924";
-  sha256 = "00s0z10vii67kq0zr2306dzfzkwac03sm3b1fqm2cfnx9vj3f4gr";
+  version = "2023.1.1003441034";
+  sha256 = "1h20b8i480gp1f673n8acw52ba2w2j4j2kag9bppnvpnccam293a";
 }
 {
   name = "jupyter-keymap";
