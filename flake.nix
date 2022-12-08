@@ -3,13 +3,19 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    helix-editor = {
+      url = "github:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager }: let
+  outputs = inputs@{ self, nixpkgs, helix-editor, home-manager }: let
+
+  specialArgs = { inherit helix-editor; };
 
   system = "x86_64-linux";
 
@@ -26,6 +32,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.nc = import ./users/nc/home.nix;
+        home-manager.extraSpecialArgs = specialArgs;
 
         # Optionally, use home-manager.extraSpecialArgs to pass
         # arguments to home.nix
@@ -46,6 +53,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.nc = import ./users/nc/home.nix;
+        home-manager.extraSpecialArgs = specialArgs;
 
         # Optionally, use home-manager.extraSpecialArgs to pass
         # arguments to home.nix
