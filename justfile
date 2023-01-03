@@ -12,6 +12,8 @@ update-vscode-plugins:
 rebuild:
   nixos-rebuild build --use-remote-sudo --flake .#{{HOST}}
   nvd diff /run/current-system result
+  # Workaround for https://github.com/NixOS/nixpkgs/issues/82851
+  sudo nix-env -p /nix/var/nix/profiles/system --set ./result
   sudo result/bin/switch-to-configuration switch
   unlink result
 
