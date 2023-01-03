@@ -66,6 +66,7 @@
     libgnome-keyring
     mosh
     networkmanagerapplet
+    nvd
     p7zip
     pavucontrol
     ranger

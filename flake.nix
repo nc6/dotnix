@@ -80,6 +80,7 @@
       pkgs.mkShell {
         buildInputs = with pkgs; [
           just
+          nvd
         ];
     };
   };
