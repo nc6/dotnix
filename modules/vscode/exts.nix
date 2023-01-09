@@ -56,8 +56,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "9.2.2";
-  sha256 = "1nfj5f60bjz9j9cqkayndmgm8nnak2g4ipjnahh6swiyvkzwl0nv";
+  version = "9.4.3";
+  sha256 = "178vdcl0q4p7v6rf451pynd4z0lnnk60487sxsn34favgvykjh5n";
 }
 {
   name = "nix-ide";
@@ -110,8 +110,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.95.2022123015";
-  sha256 = "0p4620r6d1ch85wzrfb4z5jl8rj5c1p8sm16bkvgfqb73n6pkkny";
+  version = "0.95.2023010915";
+  sha256 = "1pg4pjs2jx2rakgi2rhd13rc6krbrc79n4c12k4jkdl1vlxcsqpj";
 }
 {
   name = "remote-ssh-edit";
@@ -170,8 +170,8 @@
 {
   name = "vspacecode";
   publisher = "VSpaceCode";
-  version = "0.10.10";
-  sha256 = "1hcyycrvbb94rk5vx9rri2kvwqi4sgmhxpp40kynb8nswxcq0z07";
+  version = "0.10.13";
+  sha256 = "0iib54m5m98f6xrlhmlifz6k6nyxl16xml3kba1v1x06f0qcpb4k";
 }
 {
   name = "whichkey";
