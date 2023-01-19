@@ -1,4 +1,4 @@
-{ pkgs, helix-editor, ... }:
+{ pkgs, helix-editor, unison, ... }:
 
 {
   imports = [
@@ -74,6 +74,9 @@
     tmux
     udiskie
     wally-cli
+
+    # Unison
+    unison.packages.${system}.ucm
 
   ];
 

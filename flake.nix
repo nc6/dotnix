@@ -11,11 +11,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    unison = {
+      url = "github:ceedubs/unison-nix";
+      inputs.nixpkgs-non-darwin.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, helix-editor, home-manager }: let
+  outputs = inputs@{ self, nixpkgs, helix-editor, home-manager, unison }: let
 
-  specialArgs = { inherit helix-editor; };
+  specialArgs = { inherit helix-editor unison; };
 
   system = "x86_64-linux";
 
