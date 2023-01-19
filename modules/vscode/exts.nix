@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.1.1604";
-  sha256 = "15j60y8la7hdsdnpx3dwwpjh6whp3lh4y4dh2x53dj7hb7k96iv2";
+  version = "2023.1.1904";
+  sha256 = "12hkxa9n4qi8sm0738rhkxn0813arvr9bnp8kzhqpc4dr9a2iz91";
 }
 {
   name = "EditorConfig";
@@ -104,8 +104,8 @@
 {
   name = "jupyter-renderers";
   publisher = "ms-toolsai";
-  version = "1.0.13";
-  sha256 = "08cca1cxs1acx9wglr6gwjqvvnnkvbhyvvij24vxk698cja3cg4r";
+  version = "1.0.14";
+  sha256 = "07bgpspxgr51bblk2nagxdm2wxzcwbqg5sl8m78mc9pg49w804f8";
 }
 {
   name = "remote-ssh";
@@ -154,6 +154,18 @@
   publisher = "TheNuProjectContributors";
   version = "0.8.0";
   sha256 = "0065ckgpsalqgv9zw8gvxxkqzwl7mjp6mydnlm1m3y9qxlfl010s";
+}
+{
+  name = "unison-ui";
+  publisher = "TomSherman";
+  version = "0.1.0";
+  sha256 = "1wf4lbrh1d32cb4zh8w9kysdn4cvf8yw9cjihvbqj4i1mwk00sad";
+}
+{
+  name = "unison";
+  publisher = "unison-lang";
+  version = "0.0.8";
+  sha256 = "103qh3n9w7crmjri2xfvzd78qdnjxnkjjvi0yglrip8gy1wvasmn";
 }
 {
   name = "org-mode";
