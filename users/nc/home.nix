@@ -37,7 +37,6 @@
     zoxide
 
     # Graphics
-    darktable
     gwenview
     okular
 
