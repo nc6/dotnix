@@ -32,6 +32,12 @@
           }
           { block = "networkmanager"; }
           { block = "sound"; }
+          {
+            block = "battery";
+            interval = 10;
+            format = "{percentage} {time}";
+            hide_missing = true;
+          }
           { block = "keyboard_layout";
             driver = "localebus";
           }
