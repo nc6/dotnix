@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.2.604";
-  sha256 = "109yry2vfxx64i13i1pzls2v6nsdnlzxd0b06h465vzblam1c302";
+  version = "2023.2.1704";
+  sha256 = "0ydz7r1fj9rlvlw31xnd3f7mmsjys7y8lj3agbxgbwad62qizd0d";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.59.2023020609";
-  sha256 = "1na5zd0q77pysqdzqbnybmyxknm1rwnl1bjnxxwlghk46fswy2z2";
+  version = "0.59.2023021609";
+  sha256 = "0qxgwsz55h0dl6kpqzjqdqll5w2lqzmk872vq0hj8k12v7wbajmw";
 }
 {
   name = "haskell";
@@ -56,8 +56,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "9.6.1";
-  sha256 = "07m42pc1ml29bg93s2w7pimg9a55zpyvhpkx5s5a7yga5j36vr8l";
+  version = "9.7.0";
+  sha256 = "0gkgzd1z1y1acnd0a15m3h43i38pnf60wpl4vjcw09qfx84ahlk3";
 }
 {
   name = "nix-ide";
@@ -92,8 +92,8 @@
 {
   name = "jupyter";
   publisher = "ms-toolsai";
-  version = "2023.2.1000381022";
-  sha256 = "0mb0nh0s89gyail0c901xnjmygdln3im4hnl1vv0ny6lll1ikwfq";
+  version = "2023.2.1000491010";
+  sha256 = "0d5rggkpcvb4lvm3c10xacg593ly9jif4jd6vcib9w0wfk4h8r97";
 }
 {
   name = "jupyter-keymap";
@@ -104,14 +104,14 @@
 {
   name = "jupyter-renderers";
   publisher = "ms-toolsai";
-  version = "1.0.14";
-  sha256 = "07bgpspxgr51bblk2nagxdm2wxzcwbqg5sl8m78mc9pg49w804f8";
+  version = "1.0.15";
+  sha256 = "101mjb5qapm8m4h46pxshvw43pfnzw4ii1ilm893nifigfx8y7i5";
 }
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.97.2023020215";
-  sha256 = "0iy0s4whm19r59a5x03phk71ryf9arbmpi5qasa44ymnhhhl1a4w";
+  version = "0.97.2023021615";
+  sha256 = "1pmjg8fgxlv5r18b6shkcw3lyl9fzx3zf6kvfpl36wnyblm6palv";
 }
 {
   name = "remote-ssh-edit";
@@ -158,8 +158,8 @@
 {
   name = "unison-ui";
   publisher = "TomSherman";
-  version = "0.1.0";
-  sha256 = "1wf4lbrh1d32cb4zh8w9kysdn4cvf8yw9cjihvbqj4i1mwk00sad";
+  version = "0.1.5";
+  sha256 = "1r7mys0qycmbnfjq9yx4icgjn7ijhia9vikpwlvsnna730ixxdiy";
 }
 {
   name = "unison";
@@ -182,8 +182,8 @@
 {
   name = "vspacecode";
   publisher = "VSpaceCode";
-  version = "0.10.13";
-  sha256 = "0iib54m5m98f6xrlhmlifz6k6nyxl16xml3kba1v1x06f0qcpb4k";
+  version = "0.10.14";
+  sha256 = "0v8nk86zxj1iakrvmk656541r2byvnvchcqsdb6kdhznyfdp0cc9";
 }
 {
   name = "whichkey";
