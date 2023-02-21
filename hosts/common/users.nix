@@ -4,6 +4,6 @@
     description = "Nicholas Clarke";
     isNormalUser = true;
     uid = 1000;
-    extraGroups = ["plugdev" "wheel" "networkmanager" ];
+    extraGroups = ["plugdev" "wheel" "networkmanager" "libvirtd"];
   };
 }
