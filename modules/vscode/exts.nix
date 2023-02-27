@@ -84,12 +84,6 @@
   sha256 = "0fkrjcw3kiggdqd81v03q80mgdv6ykckpi25mcj9jp4vz027dgg3";
 }
 {
-  name = "vscoq";
-  publisher = "maximedenes";
-  version = "0.3.7";
-  sha256 = "01454f8c0cs6fwc6znb5m55sp6hj0cq6wh536kjqby70dmprygs1";
-}
-{
   name = "direnv";
   publisher = "mkhl";
   version = "0.10.1";
