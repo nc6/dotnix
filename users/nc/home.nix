@@ -100,4 +100,6 @@
     TERMINAL = "${pkgs.alacritty}/bin/alacritty";
   };
 
+  home.keyboard.layout = "eu";
+
 }
