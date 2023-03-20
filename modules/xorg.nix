@@ -51,6 +51,8 @@
     };
   };
 
+  programs.rofi.enable = true;
+
   services.betterlockscreen = {
     enable = true;
   };
@@ -67,6 +69,7 @@
       modifier = mod;
 
       keybindings = lib.mkOptionDefault {
+        "${mod}+d" = "exec ${pkgs.rofi}/bin/rofi -show combi";
         "${mod}+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
 
         "${mod}+h" = "focus left";
