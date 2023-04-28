@@ -13,7 +13,7 @@
     };
     unison = {
       url = "github:ceedubs/unison-nix";
-      inputs.nixpkgs-non-darwin.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

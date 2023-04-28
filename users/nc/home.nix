@@ -29,7 +29,7 @@
     silver-searcher
     clang
     gnumake
-    helix-editor.packages.${system}.helix
+    # helix-editor.packages.${system}.helix
     ispell
     niv
     nix-prefetch-git
