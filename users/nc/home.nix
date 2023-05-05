@@ -1,4 +1,4 @@
-{ pkgs, helix-editor, unison, ... }:
+{ pkgs, unison, ... }:
 
 {
   imports = [
@@ -29,7 +29,7 @@
     silver-searcher
     clang
     gnumake
-    # helix-editor.packages.${system}.helix
+    helix
     ispell
     niv
     nix-prefetch-git

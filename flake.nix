@@ -3,10 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    helix-editor = {
-      url = "github:helix-editor/helix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,9 +13,9 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, helix-editor, home-manager, unison }: let
+  outputs = inputs@{ self, nixpkgs, home-manager, unison }: let
 
-  specialArgs = { inherit helix-editor unison; };
+  specialArgs = { inherit unison; };
 
   system = "x86_64-linux";
 
