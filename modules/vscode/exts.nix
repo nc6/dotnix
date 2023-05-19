@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.5.1313";
-  sha256 = "1kr4jc2i8a0grd69iyb0cf0fckr7r7vx6bm10gk8l0q3rdqa9zbc";
+  version = "2023.5.1805";
+  sha256 = "1ddlxcg4ab5praa5adfimzj1xk7jx9z119mfikkllinxdyazcpaj";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.65.2023051109";
-  sha256 = "0b00f0wvldpc0z0yijq5gmsp4ry56kzakshvlr50cl429vc6016n";
+  version = "0.65.2023051809";
+  sha256 = "08vp4apf4ncqkxnqgrf4riljryn1msbxrp3s8n8j5k37hp59n6js";
 }
 {
   name = "haskell";
@@ -80,8 +80,8 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.40";
-  sha256 = "1dvngm5cvn7dvg570palq9f86jxrji79qx8k9nhmw0k5l1y26283";
+  version = "0.6.41";
+  sha256 = "063h3h7my49clci43jqnzrv5c2v9r5qxcxlrs414md1bcqfqmr1f";
 }
 {
   name = "direnv";
