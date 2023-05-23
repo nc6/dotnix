@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.5.1805";
-  sha256 = "1ddlxcg4ab5praa5adfimzj1xk7jx9z119mfikkllinxdyazcpaj";
+  version = "2023.5.2205";
+  sha256 = "1vbgz53vy9wj89pwyvxw8mmh0c1ns03ghw57cl28id8m7qn6agyn";
 }
 {
   name = "EditorConfig";
@@ -80,8 +80,8 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.41";
-  sha256 = "063h3h7my49clci43jqnzrv5c2v9r5qxcxlrs414md1bcqfqmr1f";
+  version = "0.6.42";
+  sha256 = "1rxaz6iiqznj5r3nfwybkq7xjqzbkc94a5nc4smqf6yaibwzh2wk";
 }
 {
   name = "direnv";
