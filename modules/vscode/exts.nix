@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.5.2505";
-  sha256 = "0mi2ljbjb1r4dhccl2rdvwmxs2ymj79wnglla36kliv2czlizama";
+  version = "2023.5.3105";
+  sha256 = "0wgwpmkiwzjrkc7xfqmnffz98n1n5kxxm6pffdmf5hwbdfvhzl6d";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.65.2023052608";
-  sha256 = "0jj068bgnrml76ai21ihwdvvihvfzxr2ckrb0i1pvvsmz8j5jf1r";
+  version = "0.65.2023053009";
+  sha256 = "040bgnnnni37dn24p7j2i7gmcal4bm21mbm2gir2jgsg2mrmfa7d";
 }
 {
   name = "haskell";
@@ -56,8 +56,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "9.11.2";
-  sha256 = "0cvrfad90zf803q2r8b7cfl3l4xzcskjc91bbymp3zd5za8gz56c";
+  version = "9.11.4";
+  sha256 = "00ys70cp0pl3h59516mvl8k80187dwwg0132vh5vw2h9lk8y84x9";
 }
 {
   name = "nix-ide";
