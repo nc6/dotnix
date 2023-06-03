@@ -30,15 +30,9 @@
     defaultLocale = "en_GB.UTF-8";
   };
 
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "uk";
-  };
-
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
 
   services.openssh.enable = true;
   services.fwupd.enable = true;
-  services.lorri.enable = true;
 }

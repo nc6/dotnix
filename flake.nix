@@ -61,6 +61,27 @@
     ];
   };
 
+  orome = nixpkgs.lib.nixosSystem {
+    inherit system;
+    modules = [
+      ./hosts/orome/configuration.nix
+      home-manager.nixosModules.home-manager
+      {
+        nix.registry.nixpkgs.flake = inputs.nixpkgs;
+        nixpkgs.config = {
+          allowUnfree = true;
+        };
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.users.nc = import ./users/nc/home.nix;
+        home-manager.extraSpecialArgs = specialArgs;
+
+        # Optionally, use home-manager.extraSpecialArgs to pass
+        # arguments to home.nix
+      }
+    ];
+  };
+
   build01 = home-manager.lib.homeManagerConfiguration rec {
     inherit system;
     username = "nc";
@@ -70,7 +91,7 @@
 
   in {
     nixosConfigurations = {
-      inherit lorien varda;
+      inherit lorien varda orome;
     };
     homeConfigurations = {
       inherit build01;
