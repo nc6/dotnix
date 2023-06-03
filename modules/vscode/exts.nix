@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.5.3105";
-  sha256 = "0wgwpmkiwzjrkc7xfqmnffz98n1n5kxxm6pffdmf5hwbdfvhzl6d";
+  version = "2023.6.205";
+  sha256 = "1a5ilw4lb4layknwxw36gn5m73mfdlk0x8br8ad82a948iv4pzcn";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.65.2023053009";
-  sha256 = "040bgnnnni37dn24p7j2i7gmcal4bm21mbm2gir2jgsg2mrmfa7d";
+  version = "0.65.2023060209";
+  sha256 = "1mgv73d3l1dvkm17c3nlx8zf9d8rrqzq5vfz4k1wk9f4m8blnb6x";
 }
 {
   name = "haskell";
@@ -86,8 +86,8 @@
 {
   name = "direnv";
   publisher = "mkhl";
-  version = "0.12.1";
-  sha256 = "0lizp7r2l6dayhvxkz3ghsgywz9magvy7lzkc5dkcqxcsi1p4klb";
+  version = "0.12.2";
+  sha256 = "1dkasigf6q7g4wqzf7mn4al9fdf391d8jjww419szk5c4sz8aps8";
 }
 {
   name = "remote-ssh";
@@ -182,7 +182,7 @@
 {
   name = "material-theme";
   publisher = "zhuangtongfa";
-  version = "3.15.14";
-  sha256 = "1rf8k6hrxkny8f9l3gd2sqsz7w4cqmx8ga5g7fpj3mdhc4bsmys7";
+  version = "3.15.15";
+  sha256 = "0py86zzfxwr2k2ywq9n29ka0xblpq5m8k1yyn8z8zkpik1mljl2d";
 }
 ]
