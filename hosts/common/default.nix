@@ -33,6 +33,9 @@
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
 
+  # Needed to run Sway under home-manager
+  security.polkit.enable = true;
+
   services.openssh.enable = true;
   services.fwupd.enable = true;
 }
