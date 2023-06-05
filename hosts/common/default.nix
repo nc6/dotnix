@@ -5,18 +5,23 @@
       # Include cachix caches
       ./cachix.nix
       ./fonts.nix
+      ./greeter.nix
       ./keyring.nix
       ./nix.nix
       ./packages.nix
       ./udev.nix
       ./users.nix
-      ./xserver.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;  
+  };
+  
   networking = {
     networkmanager.enable = true;
     nameservers = [
@@ -32,6 +37,9 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
+
+  # Needed to run Sway under home-manager
+  security.polkit.enable = true;
 
   services.openssh.enable = true;
   services.fwupd.enable = true;

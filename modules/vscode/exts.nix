@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.6.205";
-  sha256 = "1a5ilw4lb4layknwxw36gn5m73mfdlk0x8br8ad82a948iv4pzcn";
+  version = "2023.6.505";
+  sha256 = "0mab2daz3rf8z6w2mdrys40pi6gqcxmccbaqk3m3b24dv4lg5cjk";
 }
 {
   name = "EditorConfig";
@@ -38,8 +38,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.65.2023060209";
-  sha256 = "1mgv73d3l1dvkm17c3nlx8zf9d8rrqzq5vfz4k1wk9f4m8blnb6x";
+  version = "0.65.2023060509";
+  sha256 = "1lvlpbf2xqzx5wddk84yaa40dmia6bax54pwr4gmz2s8ig2c5c01";
 }
 {
   name = "haskell";

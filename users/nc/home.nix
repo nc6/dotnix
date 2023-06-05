@@ -6,10 +6,11 @@
     (import ../../modules/bash)
     (import ../../modules/git.nix)
     (import ../../modules/haskell.nix)
+    (import ../../modules/i3status-rs.nix)
     (import ../../modules/neovim.nix)
     (import ../../modules/nushell)
+    (import ../../modules/sway.nix)
     (import ../../modules/vscode)
-    (import ../../modules/xorg.nix)
   ];
 
   home.stateVersion = "18.09";
