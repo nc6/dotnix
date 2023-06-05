@@ -11,7 +11,6 @@
     (import ../../modules/nushell)
     (import ../../modules/sway.nix)
     (import ../../modules/vscode)
-    (import ../../modules/xorg.nix)
   ];
 
   home.stateVersion = "18.09";

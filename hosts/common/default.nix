@@ -5,12 +5,12 @@
       # Include cachix caches
       ./cachix.nix
       ./fonts.nix
+      ./greeter.nix
       ./keyring.nix
       ./nix.nix
       ./packages.nix
       ./udev.nix
       ./users.nix
-      ./xserver.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
