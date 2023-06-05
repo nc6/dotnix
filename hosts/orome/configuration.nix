@@ -15,6 +15,7 @@
   networking.hostName = "orome"; # Define your hostname.
 
   # Enable Bluetooth
+  hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
   # Enable CUPS to print documents.
