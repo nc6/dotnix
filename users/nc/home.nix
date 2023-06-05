@@ -41,9 +41,6 @@
     gwenview
     okular
 
-    # Idris
-    idris2
-
     # Latex
     (texlive.combine {
       inherit (texlive) scheme-small listings glossaries mfirstuc parskip xfor;
