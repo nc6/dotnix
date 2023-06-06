@@ -3,7 +3,6 @@ bodil.file-browser
 davidnussio.vscode-jq-playground
 eamodio.gitlens
 EditorConfig.EditorConfig
-edonet.vscode-command-runner
 GitHub.vscode-pull-request-github
 haskell.haskell
 jacobdufault.fuzzy-search
@@ -15,15 +14,11 @@ kahole.magit
 mkhl.direnv
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
-nwolverson.ide-purescript
-nwolverson.language-purescript
-scala-lang.scala
 sjurmillidahl.ormolu-vscode
 stkb.rewrap
 TheNuProjectContributors.vscode-nushell-lang
 TomSherman.unison-ui
 unison-lang.unison
-vscode-org-mode.org-mode
 vscodevim.vim
 VSpaceCode.vspacecode
 VSpaceCode.whichkey

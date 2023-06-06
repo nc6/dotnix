@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.6.505";
-  sha256 = "0mab2daz3rf8z6w2mdrys40pi6gqcxmccbaqk3m3b24dv4lg5cjk";
+  version = "2023.6.605";
+  sha256 = "1xs6x8p8ir5a8qzhxngcd6d58k27rs7nraxncj62pq0yrxbk574l";
 }
 {
   name = "EditorConfig";
@@ -30,16 +30,10 @@
   sha256 = "0fa4h9hk1xq6j3zfxvf483sbb4bd17fjl5cdm3rll7z9kaigdqwg";
 }
 {
-  name = "vscode-command-runner";
-  publisher = "edonet";
-  version = "0.0.124";
-  sha256 = "1rmgfnsdcfga90s1784yvwkrr590xzgakm40axvjv8ybar6737vb";
-}
-{
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.65.2023060509";
-  sha256 = "1lvlpbf2xqzx5wddk84yaa40dmia6bax54pwr4gmz2s8ig2c5c01";
+  version = "0.65.2023060609";
+  sha256 = "0g10i7pz8f6cdina9l54d77bk76z4wlfjzy6h121pzs3w0ryfyd8";
 }
 {
   name = "haskell";
@@ -102,24 +96,6 @@
   sha256 = "0cmh2d73y1kmp6a92h3z7gams7lnqvb7rgib52kqslm4hyhdmii6";
 }
 {
-  name = "ide-purescript";
-  publisher = "nwolverson";
-  version = "0.26.1";
-  sha256 = "1ig8z5k6gkdvxqfc0plf3dwvhz3qawydjmrln5bgsacr6jhfxi3i";
-}
-{
-  name = "language-purescript";
-  publisher = "nwolverson";
-  version = "0.2.8";
-  sha256 = "1nhzvjwxld53mlaflf8idyjj18r1dzdys9ygy86095g7gc4b1qys";
-}
-{
-  name = "scala";
-  publisher = "scala-lang";
-  version = "0.5.6";
-  sha256 = "004zc3id5jk8hk6q27g4p36prvnlqdsgda0gd6xvs4gamhywhb3s";
-}
-{
   name = "ormolu-vscode";
   publisher = "sjurmillidahl";
   version = "0.0.10";
@@ -148,12 +124,6 @@
   publisher = "unison-lang";
   version = "0.0.8";
   sha256 = "103qh3n9w7crmjri2xfvzd78qdnjxnkjjvi0yglrip8gy1wvasmn";
-}
-{
-  name = "org-mode";
-  publisher = "vscode-org-mode";
-  version = "1.0.0";
-  sha256 = "1dp6mz1rb8awrrpig1j8y6nyln0186gkmrflfr8hahaqr668il53";
 }
 {
   name = "vim";
