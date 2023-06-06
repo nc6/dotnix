@@ -61,6 +61,7 @@
     feh
     gnupg
     libgnome-keyring
+    libnotify
     mosh
     networkmanagerapplet
     nvd

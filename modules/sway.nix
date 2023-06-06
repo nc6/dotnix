@@ -46,6 +46,7 @@
       startup = [
         { command = "${pkgs.udiskie}/bin/udiskie --tray"; }
         { command = "${pkgs.networkmanagerapplet}/bin/nm-applet";}
+        { command = "${pkgs.mako}/bin/mako";}
       ];
     };
   };
