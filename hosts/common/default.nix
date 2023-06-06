@@ -19,9 +19,9 @@
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;  
+    driSupport = true;
   };
-  
+
   networking = {
     networkmanager.enable = true;
     nameservers = [
@@ -40,6 +40,10 @@
 
   # Needed to run Sway under home-manager
   security.polkit.enable = true;
+  security.rtkit.enable = true;
+
+  # Enable dconf
+  programs.dconf.enable = true;
 
   services.openssh.enable = true;
   services.fwupd.enable = true;
