@@ -45,6 +45,13 @@
   # Enable dconf
   programs.dconf.enable = true;
 
+  # Needed for screen sharing
+  services.dbus.enable = true;
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
+
   services.openssh.enable = true;
   services.fwupd.enable = true;
 }
