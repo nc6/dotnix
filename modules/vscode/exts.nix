@@ -20,8 +20,8 @@
 {
   name = "gitlens";
   publisher = "eamodio";
-  version = "2023.6.2005";
-  sha256 = "1xykpjgwq2wjm4sgf703yfifa0mny9qd9p8dlxabh6mp9mak54z8";
+  version = "2023.7.305";
+  sha256 = "15ypr4c2w3rg4wqvaqzhf7vbb2nwk1arl41bv9csn4frmdvrhixg";
 }
 {
   name = "EditorConfig";
@@ -32,8 +32,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.67.2023062109";
-  sha256 = "0rgm3a8m39s9iwh6ii044cd3i3f9ppd8x4c8nxr2ndchxa8y8z67";
+  version = "0.67.2023063008";
+  sha256 = "07hzdsw3iic7h4518ppyn56l7na044gkl1svnzjn4ig9hi8rr9bh";
 }
 {
   name = "haskell";
@@ -50,8 +50,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "9.12.1";
-  sha256 = "0z6sq777ap7b29rcmk3jcr1ckd5mnv4vh7mwxln25bl930zmqqa2";
+  version = "9.12.2";
+  sha256 = "0x39m2q1czc9ngzmy3g2bfx7i1n8kdyvdlp0nwja6d0lxj7gw5wi";
 }
 {
   name = "nix-ide";
@@ -74,14 +74,14 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.42";
-  sha256 = "1rxaz6iiqznj5r3nfwybkq7xjqzbkc94a5nc4smqf6yaibwzh2wk";
+  version = "0.6.43";
+  sha256 = "1qc4am0q0dvm6ljvfigz60k7dmr88rcq2vy2bgrjp2r5c91ybwhc";
 }
 {
   name = "direnv";
   publisher = "mkhl";
-  version = "0.13.0";
-  sha256 = "11rrqmsgsjfnzy10ryq5v9bxckf8x8avml5n4pz3rxp20knwkli9";
+  version = "0.14.0";
+  sha256 = "1ssh577b0fx1cnkj52fiy1x41lcf56vk85sq7yrlmkmy9gmfvrjg";
 }
 {
   name = "remote-ssh";
@@ -122,8 +122,8 @@
 {
   name = "unison";
   publisher = "unison-lang";
-  version = "0.0.8";
-  sha256 = "103qh3n9w7crmjri2xfvzd78qdnjxnkjjvi0yglrip8gy1wvasmn";
+  version = "1.0.0";
+  sha256 = "06hyfmmbsmnd996zaw26n518wgxmzfkms5wsrjs7jglaj9c1nx2g";
 }
 {
   name = "vim";
@@ -152,7 +152,7 @@
 {
   name = "material-theme";
   publisher = "zhuangtongfa";
-  version = "3.15.17";
-  sha256 = "1w943bn0i4fqch60vlz5hc6bi9hhnqwli4jlsxldfmj5mhjn0kwk";
+  version = "3.15.18";
+  sha256 = "16sgzv9gslm077q5zdv013bhfdd867f60nqjvs7p91f56wvzlvfa";
 }
 ]
