@@ -1,6 +1,4 @@
 {pkgs, lib, ...}: {
-  programs.rofi.enable = true;
-  programs.swaylock.enable = true;
 
   programs.i3status-rust = {
     enable = true;

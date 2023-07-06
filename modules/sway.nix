@@ -1,5 +1,11 @@
 {pkgs, lib, ...}: {
-  programs.rofi.enable = true;
+
+   programs.rofi = {
+    enable = true;
+    plugins = [ pkgs.rofi-calc ];
+    theme = "Paper";
+  };
+
   programs.swaylock.enable = true;
 
   wayland.windowManager.sway = {
@@ -21,7 +27,8 @@
       ];
 
       keybindings = lib.mkOptionDefault {
-        "${mod}+d" = "exec ${pkgs.rofi}/bin/rofi -show combi";
+        "${mod}+d" = "exec rofi -show combi -combi-modes \"drun,run,window\" -modes \"combi,ssh,calc\"";
+        "${mod}+c" = "exec rofi -show calc -modi calc -no-show-match -no-sort > /dev/null";
 
         "${mod}+h" = "focus left";
         "${mod}+j" = "focus down";
