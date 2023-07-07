@@ -72,6 +72,7 @@
     tmux
     udiskie
     wally-cli
+    xdg-utils
 
     # Unison
     unison.packages.${system}.ucm
