@@ -60,6 +60,7 @@
     desktop-file-utils
     feh
     gnupg
+    hoard
     libgnome-keyring
     libnotify
     mosh
