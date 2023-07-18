@@ -18,12 +18,6 @@
   sha256 = "15m4dblhj2v7fx5g8vd2r5qhdh7rkchgpi86szqq4yzcrc7ldflh";
 }
 {
-  name = "gitlens";
-  publisher = "eamodio";
-  version = "2023.7.1505";
-  sha256 = "1v6irnylh37yvr2zllw9rin882iibm4zvpdysrfwvc9qhfh5vpdx";
-}
-{
   name = "EditorConfig";
   publisher = "EditorConfig";
   version = "0.16.4";
@@ -112,18 +106,6 @@
   publisher = "TheNuProjectContributors";
   version = "1.6.0";
   sha256 = "19cq6b0267bfvkmhcrk9n67m820p6acvbild1p44xmbkv5kzafji";
-}
-{
-  name = "unison-ui";
-  publisher = "TomSherman";
-  version = "0.1.5";
-  sha256 = "1r7mys0qycmbnfjq9yx4icgjn7ijhia9vikpwlvsnna730ixxdiy";
-}
-{
-  name = "unison";
-  publisher = "unison-lang";
-  version = "1.0.0";
-  sha256 = "06hyfmmbsmnd996zaw26n518wgxmzfkms5wsrjs7jglaj9c1nx2g";
 }
 {
   name = "vim";

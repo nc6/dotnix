@@ -1,7 +1,6 @@
 bbenoist.Nix
 bodil.file-browser
 davidnussio.vscode-jq-playground
-eamodio.gitlens
 EditorConfig.EditorConfig
 GitHub.vscode-pull-request-github
 haskell.haskell
@@ -17,8 +16,6 @@ ms-vscode-remote.remote-ssh-edit
 sjurmillidahl.ormolu-vscode
 stkb.rewrap
 TheNuProjectContributors.vscode-nushell-lang
-TomSherman.unison-ui
-unison-lang.unison
 vscodevim.vim
 VSpaceCode.vspacecode
 VSpaceCode.whichkey
