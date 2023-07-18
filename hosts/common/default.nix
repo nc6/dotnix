@@ -42,6 +42,9 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
+  # Needed to run swaylock under home-manager
+  security.pam.services.swaylock = {};
+
   # Enable dconf
   programs.dconf.enable = true;
 

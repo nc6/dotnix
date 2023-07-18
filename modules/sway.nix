@@ -6,7 +6,13 @@
     theme = "Paper";
   };
 
-  programs.swaylock.enable = true;
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      image="$HOME/Pictures/Backgrounds/IMG_20180930_140935.jpg";
+      scaling="stretch";
+    };
+  };
 
   wayland.windowManager.sway = {
     enable = true;
