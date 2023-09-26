@@ -26,8 +26,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.73.2023091909";
-  sha256 = "0hamzgazyx8qhjkmri2kfcx4k68zxr2llqhg60iqm8v8ii54r8k7";
+  version = "0.73.2023092609";
+  sha256 = "06y2vy7rpwa2xp3bxq8210v4p51zlm59h7djf35vlx2hs3a30apw";
 }
 {
   name = "haskell";
@@ -116,8 +116,8 @@
 {
   name = "vspacecode";
   publisher = "VSpaceCode";
-  version = "0.10.14";
-  sha256 = "0v8nk86zxj1iakrvmk656541r2byvnvchcqsdb6kdhznyfdp0cc9";
+  version = "0.10.15";
+  sha256 = "1v540v5mghb9yg180445vs7r2cwwvgj1kspa2944fhm9h583ldmh";
 }
 {
   name = "whichkey";
