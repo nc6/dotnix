@@ -7,7 +7,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "[haskell]": {
-    "editor.defaultFormatter": "sjurmillidahl.ormolu-vscode"
+    "editor.defaultFormatter": "haskell.haskell"
   },
   "files.trimTrailingWhitespace": true,
   "workbench.editor.showTabs": false,
