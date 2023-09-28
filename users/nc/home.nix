@@ -17,6 +17,10 @@
 
   home.packages = with pkgs; [
 
+    # Passwords
+    _1password
+    _1password-gui-beta
+
     # Web stuff
     google-chrome
     slack

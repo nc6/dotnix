@@ -289,12 +289,22 @@ $env.config = {
   show_banner: false # true or false to enable or disable the banner
 
   hooks: {
-    pre_prompt: [{
-      code: "
-        let direnv = (direnv export json | from json)
-        let direnv = if ($direnv | length) == 1 { $direnv } else { {} }
-        $direnv | load-env
-      "
+    pre_prompt: [{ ||
+        let direnv = (direnv export json | from json | default {})
+        if ($direnv | is-empty) {
+            return
+        }
+        $direnv
+        | items {|key, value|
+           {
+              key: $key
+              value: (if $key in $env.ENV_CONVERSIONS {
+                do ($env.ENV_CONVERSIONS | get $key | get from_string) $value
+              } else {
+                  $value
+              })
+            }
+        } | transpose -ird | load-env
     }]
     pre_execution: [{
       $nothing  # replace with source code to run before the repl input is run
