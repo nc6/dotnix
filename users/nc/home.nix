@@ -28,7 +28,8 @@
     signal-desktop
     tdesktop
     zoom-us
-    zotero
+    # Disabled due to CVE-2023-5217
+    # zotero
 
     # Develpoment tools
     silver-searcher
