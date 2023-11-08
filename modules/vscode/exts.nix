@@ -26,8 +26,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.77.2023110209";
-  sha256 = "11w0k7icpjjpmjwlj51mxckq88qv3dk66ihr80drnvs41s1fn8fx";
+  version = "0.77.2023110809";
+  sha256 = "022s1mz1ahba8jdl5r0mg5jb6z8h7gi9dwwkzkv515jg03if0n0n";
 }
 {
   name = "haskell";
@@ -68,8 +68,8 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.47";
-  sha256 = "1kjq4szqxk56ckczs39jaaq33jj8nrm1afdyfh1iv1x9ak4fdbnj";
+  version = "0.6.48";
+  sha256 = "1wbffba9mwyi7s70k46hbzzp0vni1ndpnvyfcwy156l7l8s047kw";
 }
 {
   name = "direnv";
