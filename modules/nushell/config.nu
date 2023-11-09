@@ -304,7 +304,7 @@ $env.config = {
         } | transpose -ird | load-env
     }]
     pre_execution: [{
-      $nothing  # replace with source code to run before the repl input is run
+      null  # replace with source code to run before the repl input is run
     }]
     env_change: {
       PWD: [{|before, after|
