@@ -26,8 +26,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.77.2023110809";
-  sha256 = "022s1mz1ahba8jdl5r0mg5jb6z8h7gi9dwwkzkv515jg03if0n0n";
+  version = "0.77.2023112009";
+  sha256 = "1cvpqhc5lfqc3fhc98vljblm1q9d5y4wp7gfk82ri88x433qdrmw";
 }
 {
   name = "haskell";
@@ -44,8 +44,8 @@
 {
   name = "latex-workshop";
   publisher = "James-Yu";
-  version = "9.14.1";
-  sha256 = "1a8im7n25jy2zyqcqhscj62bamhwzp6kk6hdarb0p38d4pwwzxbm";
+  version = "9.15.0";
+  sha256 = "0jr9b6f5l361v33z0glci0az9wl259c4vg6qmpqrw7cbsnh5hs5a";
 }
 {
   name = "nix-ide";
@@ -110,8 +110,8 @@
 {
   name = "vim";
   publisher = "vscodevim";
-  version = "1.26.2";
-  sha256 = "0rckg4pglfw5dq6fy5gz2i0jddj7swvgv3rx5a550ly99xbfdn7p";
+  version = "1.27.0";
+  sha256 = "04ydpwyxnjcpxm7vvcils6rryn0kbq5zkv7h94b1b6bbd0byrzsx";
 }
 {
   name = "vspacecode";
