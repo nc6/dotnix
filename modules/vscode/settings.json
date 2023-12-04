@@ -10,7 +10,7 @@
     "editor.defaultFormatter": "haskell.haskell"
   },
   "files.trimTrailingWhitespace": true,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.tools": [
     {
