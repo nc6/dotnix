@@ -17,4 +17,9 @@
       trusted-users = [ "@wheel" ];
     };
   };
+
+  # Electron 25.9.0 is EOL. Allow it for now
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
 }
