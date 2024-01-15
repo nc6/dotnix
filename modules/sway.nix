@@ -49,10 +49,10 @@
         "${mod}+equal" = "split h";
         "${mod}+slash" = "split v";
 
-        "${mod}+Shift+colon" = "exec \"swaylock -k\"";
+        "${mod}+Shift+semicolon" = "exec \"swaylock -k\"";
 
-        "${mod}+Shift+greater" = "move workspace to output right";
-        "${mod}+Shift+less" = "move workspace to output left";
+        "${mod}+Shift+comma" = "move workspace to output right";
+        "${mod}+Shift+period" = "move workspace to output left";
 
       };
 
