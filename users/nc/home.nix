@@ -70,6 +70,7 @@
     nvd
     p7zip
     pavucontrol
+    pinentry-rofi
     ranger
     tmate
     tmux
@@ -87,9 +88,21 @@
     nix-direnv.enable = true;
   };
 
-  services.gpg-agent = {
+
+
+  services.gpg-agent = let pinentryRofi = pkgs.writeShellApplication {
+    name= "pinentry-rofi-with-env";
+    text = ''
+      PATH="$PATH:${pkgs.coreutils}/bin:${pkgs.rofi}/bin"
+      "${pkgs.pinentry-rofi}/bin/pinentry-rofi" "$@"
+    '';
+    };
+  in {
     enable = true;
     enableSshSupport = true;
+    extraConfig = ''
+      pinentry-program ${pinentryRofi}/bin/pinentry-rofi-with-env
+    '';
   };
 
   services.syncthing = {
