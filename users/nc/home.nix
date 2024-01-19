@@ -52,6 +52,7 @@
 
     # Organisation
     logseq
+    obsidian
 
     # R
     R
