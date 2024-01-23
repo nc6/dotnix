@@ -26,14 +26,14 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.79.2024011509";
-  sha256 = "084k2i80srxfqwh6c2i9z1r0kg0l174xdkcdxydc8c4ylpcp4ff0";
+  version = "0.79.2024012309";
+  sha256 = "15phy447fv447cn4z3w1h3ybhdlr00ba54apdvp6yjxnq7bjb8yq";
 }
 {
   name = "haskell";
   publisher = "haskell";
-  version = "2.5.1";
-  sha256 = "1gy2s9pzwsiwjk2b3sqn9hp3zbcg1jxbf4zl9hcqan3q6v96m7dz";
+  version = "2.5.2";
+  sha256 = "09pr3ya77ryj5n80k5srwaxmr0j77f6xp67w0kz324i6fhjd12bq";
 }
 {
   name = "fuzzy-search";
@@ -68,20 +68,20 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.55";
-  sha256 = "1bbqidh9ydhpk5nscba2igs1349rlkw4zb24c9q7h8qan0i99kar";
+  version = "0.6.56";
+  sha256 = "0nnrl3jbg5k776wajk1109svb4vsm31w36yqj0wwnizlza3pjqda";
 }
 {
   name = "direnv";
   publisher = "mkhl";
-  version = "0.15.2";
-  sha256 = "06lp4qgnksklgc6nvx1l9z38y7apbx0a6v886nd15aq9rq8my0ka";
+  version = "0.16.0";
+  sha256 = "1jmwqbbh5x5z7dscgcn4pb0g41k7zlhgf5i8syl3ipv6z270aq5v";
 }
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.108.2024011015";
-  sha256 = "1s07d2mfphrbg0ndjjyrvz2nzl77fds48bzghjcxbpmjmg7rndaa";
+  version = "0.108.2024011815";
+  sha256 = "1mkfvfj8zs5m1h3bnm5lq2s4c45dkwl2dsazn6ahc6zk9l9g68my";
 }
 {
   name = "remote-ssh-edit";
@@ -116,8 +116,8 @@
 {
   name = "vspacecode";
   publisher = "VSpaceCode";
-  version = "0.10.16";
-  sha256 = "1cn2i1pgp62zmniyk4q19awp5ki5dixak4gbkbfgg34xr2y2byxg";
+  version = "0.10.17";
+  sha256 = "03g46impq2bw0qvnqk9lbs3gxg7i1wl6wrqxchagh2i85dnibbdj";
 }
 {
   name = "whichkey";
