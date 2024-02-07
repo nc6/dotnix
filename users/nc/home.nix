@@ -59,6 +59,7 @@
 
     # System
     alsa-utils
+    bluetuith
     cachix
     desktop-file-utils
     feh
