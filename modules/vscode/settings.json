@@ -155,5 +155,6 @@
   "editor.guides.bracketPairs": "active",
   "workbench.colorTheme": "One Dark Pro",
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "editor.stickyScroll.enabled": true
 }
