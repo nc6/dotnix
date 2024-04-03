@@ -80,8 +80,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.111.2024032515";
-  sha256 = "1z90fhrinasaafr8ki38hd8bb57l6q3lp475kgp19lvnh2v2g79i";
+  version = "0.111.2024032715";
+  sha256 = "1y0bx128djxsy3dkr12f89kzijq60pvgwd8pdg2x43fi0c3nnk42";
 }
 {
   name = "remote-ssh-edit";
@@ -128,8 +128,8 @@
 {
   name = "latex-input";
   publisher = "yellpika";
-  version = "1.0.0";
-  sha256 = "1j18qnpaq5jwkbir1173hy5iq4awddi9jhnyrd41k9nk217fc0fc";
+  version = "2.3.0";
+  sha256 = "1jwr5bzd52wxv01qplq36inkzwv46fyvl2cfmx06ylgkn4qnls61";
 }
 {
   name = "material-theme";
