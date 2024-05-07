@@ -14,6 +14,9 @@
 
   networking.hostName = "lorien"; # Define your hostname.
 
+  # Set your time zone.
+  time.timeZone = "Europe/Zurich";
+
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 8080 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
