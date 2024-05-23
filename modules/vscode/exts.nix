@@ -26,14 +26,14 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.89.2024050904";
-  sha256 = "16c3vqbh6yf4jw92czzf6j1i9ppjhk7jwi3r8wsghb434yhlwh37";
+  version = "0.89.2024051504";
+  sha256 = "11729v9ccs1q8ywaahdsl46l29gyncnxxkh8mdh6n4anig39gva2";
 }
 {
   name = "haskell";
   publisher = "haskell";
-  version = "2.5.2";
-  sha256 = "09pr3ya77ryj5n80k5srwaxmr0j77f6xp67w0kz324i6fhjd12bq";
+  version = "2.5.3";
+  sha256 = "13s39fvb6kwxklcfsa5xh4z7y8y3y0h6jv39ljrgl24qkwgx8xnw";
 }
 {
   name = "fuzzy-search";
@@ -80,8 +80,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.112.2024050815";
-  sha256 = "0b8j2iv7fd9nzmlfm1xh5bfhdffdinb98zcq1jvfizlckh308y3d";
+  version = "0.112.2024051615";
+  sha256 = "0ndvy0lcgp04yy1pd2p3bxi9nas5ncb5dka7a804kvawq1pylxxy";
 }
 {
   name = "remote-ssh-edit";
@@ -110,8 +110,8 @@
 {
   name = "vim";
   publisher = "vscodevim";
-  version = "1.27.2";
-  sha256 = "0m5gdyvd3yg52d8zxwdw188wqjfvdyyvwnw5dz57pn633g5bi49v";
+  version = "1.27.3";
+  sha256 = "1k5sccfblslfn086rpiswgxhxmylj0bj2bi7slk7vf73ngk4dqwy";
 }
 {
   name = "vspacecode";
