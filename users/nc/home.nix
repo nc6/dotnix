@@ -61,6 +61,7 @@
     # System
     alsa-utils
     bluetuith
+    btop
     cachix
     desktop-file-utils
     feh
