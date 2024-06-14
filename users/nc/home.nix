@@ -77,10 +77,10 @@
     pinentry-rofi
     ranger
     tmate
-    tmux
     udiskie
     wally-cli
     xdg-utils
+    zellij
 
     # Unison
     unison.packages.${system}.ucm
