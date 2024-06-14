@@ -80,7 +80,6 @@
     udiskie
     wally-cli
     xdg-utils
-    zellij
 
     # Unison
     unison.packages.${system}.ucm
@@ -92,7 +91,13 @@
     nix-direnv.enable = true;
   };
 
-
+  programs.zellij = {
+    enable = true;  
+    settings = {
+      default_shell = "nu";
+      pane_frames = false;
+    };
+  };
 
   services.gpg-agent = let pinentryRofi = pkgs.writeShellApplication {
     name= "pinentry-rofi-with-env";
