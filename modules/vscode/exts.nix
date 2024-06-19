@@ -80,8 +80,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.112.2024053015";
-  sha256 = "06rpdyj7w2qlkk766cwx4430lrzn953ya2z8nzvfsl4zhjmskxmx";
+  version = "0.113.2024061415";
+  sha256 = "09j509m17wpl9gnbnj3zcz7i6qbmc8lyx1yrba9l47m421xp61bw";
 }
 {
   name = "remote-ssh-edit";
