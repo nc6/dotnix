@@ -6,6 +6,7 @@
     (import ../../modules/bash)
     (import ../../modules/git.nix)
     (import ../../modules/haskell.nix)
+    (import ../../modules/helix.nix)
     (import ../../modules/i3status-rs.nix)
     (import ../../modules/neovim.nix)
     (import ../../modules/nushell)
@@ -36,7 +37,6 @@
     silver-searcher
     clang
     gnumake
-    helix
     ispell
     niv
     nix-prefetch-git
@@ -82,7 +82,7 @@
     xdg-utils
 
     # Unison
-    unison.packages.${system}.ucm
+    # unison.packages.${system}.ucm
 
   ];
 
