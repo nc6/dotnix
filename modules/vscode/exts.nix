@@ -26,8 +26,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.95.2024081404";
-  sha256 = "1gxbm66hwyi3wr13dnccxa9x9503gnwx6ljf9iabdsfvyiyf5ghy";
+  version = "0.95.2024082104";
+  sha256 = "11ckgl769i3b7yr4qpkjc8r9rb7k3vp1lps7fgccg56q2dfk2fvd";
 }
 {
   name = "haskell";
