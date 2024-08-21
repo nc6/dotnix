@@ -23,7 +23,6 @@
     _1password-gui-beta
 
     # Web stuff
-    element-desktop
     google-chrome
     slack
     spotify
