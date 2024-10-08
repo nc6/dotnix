@@ -19,7 +19,7 @@
 
     config = let mod = "Mod4"; in {
       modifier = mod;
-      terminal = "${pkgs.alacritty}/bin/alacritty";
+      terminal = "${pkgs.wezterm}/bin/wezterm";
 
       input."type:keyboard" = {
         xkb_layout = "eu";

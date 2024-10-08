@@ -2,7 +2,6 @@
 
 {
   imports = [
-    (import ../../modules/alacritty.nix)
     (import ../../modules/bash)
     (import ../../modules/git.nix)
     (import ../../modules/haskell.nix)
@@ -24,11 +23,9 @@
 
     # Web stuff
     google-chrome
-    slack
     spotify
     signal-desktop
     tdesktop
-    zoom-us
     # Disabled due to CVE-2023-5217
     # zotero
 
@@ -37,7 +34,6 @@
     clang
     gnumake
     ispell
-    niv
     nix-prefetch-git
     zeal
     zoxide
@@ -80,9 +76,6 @@
     wally-cli
     xdg-utils
 
-    # Unison
-    # unison.packages.${system}.ucm
-
   ];
 
   programs.direnv = {
@@ -90,13 +83,7 @@
     nix-direnv.enable = true;
   };
 
-  programs.zellij = {
-    enable = true;  
-    settings = {
-      default_shell = "nu";
-      pane_frames = false;
-    };
-  };
+  programs.wezterm.enable = true;
 
   services.gpg-agent = let pinentryRofi = pkgs.writeShellApplication {
     name= "pinentry-rofi-with-env";
@@ -119,7 +106,7 @@
 
   home.sessionVariables = {
     EDITOR = "${pkgs.neovim}/bin/nvim";
-    TERMINAL = "${pkgs.alacritty}/bin/alacritty";
+    TERMINAL = "${pkgs.wezterm}/bin/wezterm";
   };
 
   home.keyboard.layout = "eu";
