@@ -71,7 +71,7 @@
     pavucontrol
     pinentry-rofi
     ranger
-    tmate
+    upterm
     udiskie
     wally-cli
     xdg-utils

@@ -24,5 +24,6 @@
 
   home.packages = with pkgs; [
     gitAndTools.gh
+    lazygit
   ];
 }
