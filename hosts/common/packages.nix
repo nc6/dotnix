@@ -7,5 +7,6 @@
     neovim
     pinentry
     wget
+    wl-clipboard
   ];
 }
