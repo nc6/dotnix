@@ -60,7 +60,6 @@
     cachix
     desktop-file-utils
     feh
-    gnupg
     hoard
     libnotify
     libsecret
@@ -85,21 +84,17 @@
 
   programs.wezterm.enable = true;
 
-  services.gpg-agent = let pinentryRofi = pkgs.writeShellApplication {
-    name= "pinentry-rofi-with-env";
-    text = ''
-      PATH="$PATH:${pkgs.coreutils}/bin:${pkgs.rofi}/bin"
-      "${pkgs.pinentry-rofi}/bin/pinentry-rofi" "$@"
-    '';
+  programs.ssh = 
+    let
+      onePassPath = "~/.1password/agent.sock";
+    in {
+      enable = true;
+      extraConfig = ''
+        Host *
+            IdentityAgent ${onePassPath}
+      '';
     };
-  in {
-    enable = true;
-    enableSshSupport = true;
-    extraConfig = ''
-      pinentry-program ${pinentryRofi}/bin/pinentry-rofi-with-env
-    '';
-  };
-
+  
   services.syncthing = {
     enable = true;
   };
