@@ -21,6 +21,9 @@
   # Enable automatic timezones
   services.automatic-timezoned.enable = true;
 
+  services.fprintd = {
+    enable = true;
+  };
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
