@@ -69,12 +69,11 @@
     p7zip
     pavucontrol
     pinentry-rofi
-    ranger
     upterm
     udiskie
     wally-cli
     xdg-utils
-
+    yazi
   ];
 
   programs.direnv = {
@@ -100,7 +99,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "${pkgs.neovim}/bin/nvim";
+    EDITOR = "${pkgs.helix}/bin/hx";
     TERMINAL = "${pkgs.wezterm}/bin/wezterm";
   };
 
