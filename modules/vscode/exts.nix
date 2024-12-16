@@ -26,8 +26,8 @@
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.101.2024120916";
-  sha256 = "14qipfipm4hhayww6h747p8ymw0xvw1ypqc4ck5yrckkk234x4sy";
+  version = "0.103.2024121117";
+  sha256 = "0k90870ra85np0dg19mx2blr1yg9i2sk25mx08bblqh0hh0s5941";
 }
 {
   name = "haskell";
@@ -80,8 +80,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.116.2024120517";
-  sha256 = "0k4ysaqfdmclilr5gk5rflhrx4qsaq28fl9ccccwjs68aw7sbnij";
+  version = "0.117.2024121215";
+  sha256 = "1mkhz6garn97hz5ign9d1p2ycqnvwb07rprvhdbsga5dyy7sczg9";
 }
 {
   name = "remote-ssh-edit";
