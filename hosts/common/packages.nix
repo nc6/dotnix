@@ -1,6 +1,7 @@
 { pkgs,...}:
 {
   environment.systemPackages = with pkgs; [
+    cacert
     direnv
     exfat
     htop
