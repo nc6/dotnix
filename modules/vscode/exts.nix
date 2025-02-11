@@ -20,14 +20,14 @@
 {
   name = "EditorConfig";
   publisher = "EditorConfig";
-  version = "0.16.4";
-  sha256 = "0fa4h9hk1xq6j3zfxvf483sbb4bd17fjl5cdm3rll7z9kaigdqwg";
+  version = "0.16.7";
+  sha256 = "154xgkqsfm2cky0h7cq76ry3k084w33ydwn7s7c82a0f34f8rchf";
 }
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.103.2025012904";
-  sha256 = "04a69z3lrv871k4kkqbsvdpvpgyhq6wsyb8fg42hykbj6wi5r3p4";
+  version = "0.105.2025021010";
+  sha256 = "1mlhdr99y9bk4ygd0j9cyjh5da13crpbbasqlx8bdxf0hd1f6p4q";
 }
 {
   name = "haskell";
@@ -50,8 +50,8 @@
 {
   name = "nix-ide";
   publisher = "jnoortheen";
-  version = "0.4.11";
-  sha256 = "0z6fl9r124swz7d7231yylabbb967i7dh55j3fqzm96wwyrvirv7";
+  version = "0.4.12";
+  sha256 = "0rdq9wnqfrj8k1g5fcaam5iahzd16bdpi3sa0n2gi0rh02kg55fy";
 }
 {
   name = "jq-syntax-highlighting";
@@ -68,8 +68,8 @@
 {
   name = "magit";
   publisher = "kahole";
-  version = "0.6.64";
-  sha256 = "1d69j6nqmdlm6dihvq1fa207r1ycqz5225l6b3bz5wfzmb50zfri";
+  version = "0.6.66";
+  sha256 = "1nw6l87lfslb327mx19rjb51mqb8cj2gj8n8v90jd6cnwbj9pd24";
 }
 {
   name = "direnv";
@@ -80,8 +80,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.117.2025012415";
-  sha256 = "1lfra4q99jilr78gawa7jjr5va5y8pi82fcjyrmmf2xx897raf2m";
+  version = "0.118.2025021015";
+  sha256 = "1m1lfd29vzfsv3iw0bhvnqqdm55hnlxpglc92ibbavzwy09kpg0d";
 }
 {
   name = "remote-ssh-edit";
@@ -134,7 +134,7 @@
 {
   name = "material-theme";
   publisher = "zhuangtongfa";
-  version = "3.17.7";
-  sha256 = "1vv677z0sbamqmbp09179sgg91q92cj9khlk4xzmg554644y1qxn";
+  version = "3.19.0";
+  sha256 = "1z3wiacb2m7hvpfhn6qs710lsaxpy7c56jbjckccvqi705w9firb";
 }
 ]
