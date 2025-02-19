@@ -2,6 +2,7 @@
 
 {
   imports = [
+    (import ../../modules/1password.nix)
     (import ../../modules/bash)
     (import ../../modules/git.nix)
     (import ../../modules/haskell.nix)
@@ -19,8 +20,8 @@
   home.packages = with pkgs; [
 
     # Passwords
-    _1password
-    _1password-gui-beta
+    _1password-cli
+    _1password-gui
 
     # Web stuff
     google-chrome

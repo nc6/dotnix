@@ -60,7 +60,6 @@
         { command = "${pkgs.udiskie}/bin/udiskie --tray"; }
         { command = "${pkgs.networkmanagerapplet}/bin/nm-applet";}
         { command = "${pkgs.mako}/bin/mako";}
-        { command = "${pkgs._1password}/bin/1password --silent";}
       ];
     };
   };
