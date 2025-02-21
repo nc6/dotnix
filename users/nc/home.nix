@@ -42,15 +42,13 @@
 
     # Graphics
     gwenview
-    okular
+    zathura
 
     # Latex
     ghostscript
-    mupdf
 
     # Organisation
     logseq
-    obsidian
 
     # R
     R
