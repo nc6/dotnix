@@ -41,7 +41,7 @@
     zoxide
 
     # Graphics
-    gwenview
+    kdePackages.gwenview
     zathura
 
     # Latex
