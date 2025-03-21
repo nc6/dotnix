@@ -20,14 +20,14 @@
 {
   name = "EditorConfig";
   publisher = "EditorConfig";
-  version = "0.17.1";
-  sha256 = "0al61nfnq3zsir5m3mp7a2kgi2lwvdk59rj132h0888zpm5aw2xq";
+  version = "0.17.2";
+  sha256 = "1s0a2zgxk6qxl6lzw6klkn8xhsxk0l87vcbms2k8535kvscbwbay";
 }
 {
   name = "vscode-pull-request-github";
   publisher = "GitHub";
-  version = "0.107.2025030604";
-  sha256 = "11kl2pqmr3dz615jvh3b25s0px5w6gph6iqh0q6icl1hkbmfw1fy";
+  version = "0.107.2025032004";
+  sha256 = "13616qvh1km1hn5d7hzcnd7djhhb3i87zxl2ji9dn7ix813n7vcg";
 }
 {
   name = "haskell";
@@ -50,8 +50,8 @@
 {
   name = "nix-ide";
   publisher = "jnoortheen";
-  version = "0.4.12";
-  sha256 = "0rdq9wnqfrj8k1g5fcaam5iahzd16bdpi3sa0n2gi0rh02kg55fy";
+  version = "0.4.16";
+  sha256 = "0mhc58lzdn153yskqi6crvzx6pgi1d72mdhmnpc4qkbf1wx47l9i";
 }
 {
   name = "jq-syntax-highlighting";
@@ -80,8 +80,8 @@
 {
   name = "remote-ssh";
   publisher = "ms-vscode-remote";
-  version = "0.119.2025030416";
-  sha256 = "19nj5jsx9glfdfdy3b8vh5vqx8bscc4j6pry4id8m33q6ffl3gyd";
+  version = "0.119.2025031815";
+  sha256 = "0ma5rvbh02vi1162117g7s7ljgajn1p55zlcbdvk462p3iyqq77j";
 }
 {
   name = "remote-ssh-edit";
