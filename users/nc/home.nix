@@ -48,7 +48,7 @@
     ghostscript
 
     # Organisation
-    logseq
+    # logseq
 
     # R
     R
