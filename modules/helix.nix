@@ -9,6 +9,11 @@
           line-number = "relative";
           rulers = [80];
         };
+        keys = {
+          normal = {
+            "A-r" = ":reflow"; 
+          };
+        };
       };
     };
   };
