@@ -1,4 +1,4 @@
-{ pkgs, unison, ... }:
+{ pkgs, extraSources, ... }:
 
 {
   imports = [
@@ -48,7 +48,7 @@
     ghostscript
 
     # Organisation
-    # logseq
+    extraSources.pkgs-master.logseq
 
     # R
     R

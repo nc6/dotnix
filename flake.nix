@@ -3,19 +3,22 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    unison = {
-      url = "github:ceedubs/unison-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
+
+  extraSources = {
+    pkgs-master = import inputs.nixpkgs-master {
+      inherit system;
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, unison }: let
-
-  specialArgs = { inherit unison; };
+  specialArgs = { inherit extraSources; };
 
   system = "x86_64-linux";
 
