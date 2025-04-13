@@ -26,7 +26,7 @@
     # Web stuff
     google-chrome
     spotify
-    signal-desktop
+    signal-desktop-bin
     tdesktop
     # Disabled due to CVE-2023-5217
     # zotero
@@ -48,7 +48,7 @@
     ghostscript
 
     # Organisation
-    extraSources.pkgs-master.logseq
+    logseq
 
     # R
     R

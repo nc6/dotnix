@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs.haskellPackages; [
     cabal-install
-    pkgs.haskell.compiler.ghc96
+    pkgs.haskell.compiler.ghc912
     apply-refact
     # friendly
     ghcid
