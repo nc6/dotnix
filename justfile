@@ -1,6 +1,6 @@
 HOST := `hostname`
 
-default: pull update update-vscode-plugins rebuild commit
+default: pull update rebuild commit
 
 sync: pull rebuild
 

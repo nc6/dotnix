@@ -8,11 +8,11 @@
     (import ../../modules/haskell.nix)
     (import ../../modules/helix.nix)
     (import ../../modules/i3status-rs.nix)
-    (import ../../modules/neovim.nix)
     (import ../../modules/nushell)
     (import ../../modules/starship.nix)
     (import ../../modules/sway.nix)
     (import ../../modules/vscode)
+    (import ../../modules/zed-editor.nix)
   ];
 
   home.stateVersion = "18.09";
@@ -93,6 +93,8 @@
             IdentityAgent ${onePassPath}
       '';
     };
+
+  services.keybase.enable = true;
   
   services.syncthing = {
     enable = true;
