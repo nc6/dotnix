@@ -25,6 +25,7 @@
         };
         "show_wrap_guides" = true;
         "wrap_guides" = [80 100];
+        "tab_size" = 2;
       };
     };
   };
