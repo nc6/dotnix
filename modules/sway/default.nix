@@ -1,6 +1,10 @@
-{pkgs, lib, ...}: {
-
-   programs.rofi = {
+{pkgs, lib, ...}: 
+  let
+    sway-tools = pkgs.writeShellScriptBin "sway-tools" ''
+      ${pkgs.nushell}/bin/nu ${./sway-tools.nu} "$@"
+    ''; in
+{
+  programs.rofi = {
     enable = true;
     plugins = [ pkgs.rofi-calc ];
     theme = "Paper";
@@ -54,6 +58,8 @@
         "${mod}+Shift+comma" = "move workspace to output right";
         "${mod}+Shift+period" = "move workspace to output left";
 
+        "${mod}+Tab" = "exec ${sway-tools}/bin/sway-tools switch-workspace";
+        "${mod}+grave" = "exec ${sway-tools}/bin/sway-tools";
       };
 
       startup = [

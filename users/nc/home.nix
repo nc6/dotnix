@@ -11,7 +11,7 @@
     (import ../../modules/i3status-rs.nix)
     (import ../../modules/nushell)
     (import ../../modules/starship.nix)
-    (import ../../modules/sway.nix)
+    (import ../../modules/sway)
     (import ../../modules/vscode)
     (import ../../modules/zed-editor.nix)
   ];
