@@ -29,6 +29,7 @@
     spotify
     signal-desktop-bin
     tdesktop
+    thunderbird
     # Disabled due to CVE-2023-5217
     # zotero
 
@@ -37,6 +38,7 @@
     clang
     gnumake
     ispell
+    jq
     nix-prefetch-git
     zeal
     zoxide
