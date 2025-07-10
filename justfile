@@ -15,7 +15,7 @@ update-vscode-plugins:
   cat modules/vscode/exts | ./modules/vscode/update_exts.sh > ./modules/vscode/exts.nix
 
 rebuild:
-  nixos-rebuild build --use-remote-sudo --flake .#{{HOST}}
+  nixos-rebuild build --sudo --flake .#{{HOST}}
   nvd diff /run/current-system result
   # Workaround for https://github.com/NixOS/nixpkgs/issues/82851
   sudo nix-env -p /nix/var/nix/profiles/system --set ./result
