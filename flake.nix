@@ -115,7 +115,7 @@
 
   in {
     nixosConfigurations = {
-      inherit lorien varda orome;
+      inherit lorien varda orome ulmo;
     };
     homeConfigurations = {
       inherit build01;
