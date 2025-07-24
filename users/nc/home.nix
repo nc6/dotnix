@@ -86,7 +86,7 @@
 
   programs.wezterm.enable = true;
 
-  programs.ssh = 
+  programs.ssh =
     let
       onePassPath = "~/.1password/agent.sock";
     in {
@@ -94,11 +94,21 @@
       extraConfig = ''
         Host *
             IdentityAgent ${onePassPath}
+
+        Host github.com
+          HostName github.com
+          IdentitiesOnly yes
+          IdentityFile ~/.ssh/personal-ed25519.pub
+
+        Host github-shielded.com
+          HostName github.com
+          IdentitiesOnly yes
+          IdentityFile ~/.ssh/Shielded.pub
       '';
     };
 
   services.keybase.enable = true;
-  
+
   services.syncthing = {
     enable = true;
   };
