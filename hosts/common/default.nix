@@ -21,6 +21,8 @@
     enable = true;
   };
 
+  hardware.i2c.enable = true;
+
   networking = {
     networkmanager.enable = true;
     nameservers = [
