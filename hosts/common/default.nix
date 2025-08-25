@@ -23,6 +23,9 @@
 
   hardware.i2c.enable = true;
 
+  # Allow configuring of logitech peripherals
+  hardware.logitech.wireless.enable = true;
+
   networking = {
     networkmanager.enable = true;
     nameservers = [
