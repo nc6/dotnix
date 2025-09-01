@@ -59,4 +59,7 @@
 
   services.openssh.enable = true;
   services.fwupd.enable = true;
+
+  # tailscale
+  services.tailscale.enable = true;
 }
