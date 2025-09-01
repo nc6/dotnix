@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # Include common configuration
-      ../common
     ];
 
   networking.hostName = "ulmo"; # Define your hostname.
@@ -41,4 +39,8 @@
   # should.
   system.stateVersion = "25.05"; # Did you read the comment?
 
+  # Run tailscale golinks service
+  services.golink = {
+    enable = true;
+  };
 }

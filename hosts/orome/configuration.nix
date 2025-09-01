@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # Include common configuration
-      ../common
     ];
 
   networking.hostName = "orome"; # Define your hostname.
