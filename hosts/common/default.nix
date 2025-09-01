@@ -29,9 +29,12 @@
   networking = {
     networkmanager.enable = true;
     nameservers = [
+      # MagicDNS
+      "100.100.100.100"
       "1.1.1.1"
       "8.8.8.8"
     ];
+    search = [ "tail319c73.ts.net" ];
   };
 
   # Select internationalisation properties.
