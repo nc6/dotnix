@@ -43,4 +43,9 @@
   services.golink = {
     enable = true;
   };
+
+  # Act as a tailscale exit node
+  services.tailscale = {
+    useRoutingFeatures = "server";
+  };
 }

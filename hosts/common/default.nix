@@ -34,7 +34,7 @@
       "1.1.1.1"
       "8.8.8.8"
     ];
-    search = [ "tail319c73.ts.net" ];
+    search = [ "mammoth-nominal.ts.net" ];
   };
 
   # Select internationalisation properties.
