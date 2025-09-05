@@ -4,6 +4,7 @@
     programs.helix = {
       enable = true;
       settings = {
+        theme = "solarized_dark";
         editor = {
           auto-save.after-delay.enable = true;
           line-number = "relative";
@@ -11,7 +12,7 @@
         };
         keys = {
           normal = {
-            "A-r" = ":reflow"; 
+            "A-r" = ":reflow";
           };
         };
       };
