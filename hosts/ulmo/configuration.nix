@@ -29,9 +29,9 @@
     daemon.enable = true;
   };
 
-  services.logind.extraConfig = ''
-    HandlePowerKey=suspend
-  '';
+  services.logind.settings.Login = {
+    HandlePowerKey = "suspend";
+  };
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
