@@ -8,5 +8,6 @@
     fira-mono
     font-awesome_5
     emacs-all-the-icons-fonts
+    nerd-fonts.jetbrains-mono
   ];
 }
