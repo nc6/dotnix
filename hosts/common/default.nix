@@ -49,6 +49,9 @@
   # Needed to run swaylock under home-manager
   security.pam.services.swaylock = {};
 
+  # Needed for hyprland
+  programs.hyprland.enable = true;
+
   # Enable dconf
   programs.dconf.enable = true;
 

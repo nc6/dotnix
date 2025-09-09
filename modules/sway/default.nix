@@ -1,15 +1,9 @@
-{pkgs, lib, ...}: 
+{pkgs, lib, ...}:
   let
     sway-tools = pkgs.writeShellScriptBin "sway-tools" ''
       ${pkgs.nushell}/bin/nu ${./sway-tools.nu} "$@"
     ''; in
 {
-  programs.rofi = {
-    enable = true;
-    plugins = [ pkgs.rofi-calc ];
-    theme = "Paper";
-  };
-
   programs.swaylock = {
     enable = true;
     settings = {
