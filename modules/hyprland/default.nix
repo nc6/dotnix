@@ -10,6 +10,11 @@
         drag_threshold = 10;
       };
 
+      input = {
+        kb_layout = "eu";
+        follow_mouse = 1;
+      };
+
       bind = [
         "$mod, return, exec, $terminal"
         "$mod SHIFT, q, killactive"
@@ -25,6 +30,10 @@
         "$mod SHIFT, j, movewindow, d"
         "$mod SHIFT, k, movewindow, u"
         "$mod SHIFT, l, movewindow, r"
+
+        "$mod, t, togglegroup"
+
+        "$mod SHIFT, semicolon, exec, swaylock"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
@@ -43,7 +52,10 @@
         "$mod, mouse:273, resizewindow"
       ];
 
-      exec-once = "hyprpanel";
+      exec-once = [
+        "hyprpanel"
+        "udiskie --tray"
+      ];
 
       # Allow local overrides in order to iteratively build config
       source = "~/.config/hypr/local.conf";
@@ -60,13 +72,11 @@
       # Configure bar layouts for monitors.
       # See 'https://hyprpanel.com/configuration/panel.html'.
       # Default: null
-      layout = {
-        bar.layouts = {
-          "0" = {
-            left = [ "dashboard" "workspaces" ];
-            middle = [ "media" ];
-            right = [ "volume" "systray" "notifications" ];
-          };
+      bar.layouts = {
+        "0" = {
+          left = [ "workspaces" "windowtitle" ];
+          middle = [ "media" ];
+          right = [ "volume" "network" "systray" "clock" "notifications" "dashboard"];
         };
       };
 
@@ -84,12 +94,40 @@
       menus.dashboard.directories.enabled = false;
       menus.dashboard.stats.enable_gpu = true;
 
-      theme.bar.transparent = true;
+      theme = {
+        bar.transparent = true;
+        font.size = "1em";
+      };
+
+      terminal = "${pkgs.wezterm}/bin/wezterm";
 
       # theme.font = {
       #   name = "CaskaydiaCove NF";
       #   size = "16px";
       # };
+    };
+  };
+
+  services.hypridle = {
+    enable = true;
+    settings = {
+      general = {
+        after_sleep_cmd = "hyprctl dispatch dpms on";
+        ignore_dbus_inhibit = false;
+        lock_cmd = "swaylock";
+      };
+
+      listener = [
+        {
+          timeout = 900;
+          on-timeout = "swaylock";
+        }
+        {
+          timeout = 1200;
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
+        }
+      ];
     };
   };
 }
