@@ -15,6 +15,16 @@
         follow_mouse = 1;
       };
 
+      general = {
+        gaps_in = 1;
+        gaps_out = 1;
+        border_size = 1;
+
+        resize_on_border = true;
+
+        layout = dwindle;
+      };
+
       bind = [
         "$mod, return, exec, $terminal"
         "$mod SHIFT, q, killactive"
@@ -73,7 +83,7 @@
       # See 'https://hyprpanel.com/configuration/panel.html'.
       # Default: null
       bar.layouts = {
-        "0" = {
+        "*" = {
           left = [ "workspaces" "windowtitle" ];
           middle = [ "media" ];
           right = [ "volume" "network" "systray" "clock" "notifications" "dashboard"];
