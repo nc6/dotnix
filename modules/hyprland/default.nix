@@ -22,7 +22,7 @@
 
         resize_on_border = true;
 
-        layout = dwindle;
+        layout = "dwindle";
       };
 
       bind = [
@@ -72,50 +72,72 @@
     };
   };
 
-  programs.hyprpanel = {
+  programs.waybar = {
     enable = true;
-    # Configure and theme almost all options from the GUI.
-    # See 'https://hyprpanel.com/configuration/settings.html'.
-    # Default: <same as gui>
-    settings = {
-
-      # Configure bar layouts for monitors.
-      # See 'https://hyprpanel.com/configuration/panel.html'.
-      # Default: null
-      bar.layouts = {
-        "*" = {
-          left = [ "workspaces" "windowtitle" ];
-          middle = [ "media" ];
-          right = [ "volume" "network" "systray" "clock" "notifications" "dashboard"];
+    settings = [
+      {
+        layer = "top";
+        position = "top";
+        modules-left = [ "hyprland/workspaces" ];
+        modules-center = [ "hyprland/window" ];
+        modules-right = [
+          "cpu"
+          "memory"
+          "network"
+          "backlight"
+          "pulseaudio"
+          "battery"
+          "tray"
+          "clock"
+        ];
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          on-scroll-up = "hyprctl dispatch workspace e+1";
+          on-scroll-down = "hyprctl dispatch workspace e-1";
         };
-      };
-
-      bar.launcher.autoDetectIcon = true;
-      bar.workspaces.show_icons = true;
-
-      menus.clock = {
-        time = {
-          military = true;
-          hideSeconds = true;
+        "hyprland/window" = {
+          separate-outputs = true;
         };
-        weather.unit = "metric";
-      };
+        network = {
+          format-wifi = "  {essid} ({signalStrength}%)"; # Font Awesome WiFi icon
+          format-ethernet = "  {ipaddr}";               # Font Awesome Ethernet icon
+          format-disconnected = "  No net";             # Font Awesome Alert/Triangle icon
+        };
+        cpu = {
+          format = " {usage}%";                        # Font Awesome Microchip icon
+        };
+        memory = {
+          format = " {used}G/{total}G";                # Font Awesome Memory icon
+        };
+        temperature = {
+          format = " {temperature}°C";                 # Font Awesome Thermometer icon
+        };
+        pulseaudio = {
+          format = "{icon} {volume}%";
+          format-icons = {
+            default = [ "" "" "" ];                # Series of Font Awesome speaker icons
+            muted = "";                                # Font Awesome Muted icon
+          };
+        };
+        backlight = {
+          format = " {percent}%";                      # Font Awesome Lightbulb icon
+        };
+        battery = {
+          format = " {capacity}%";                     # Font Awesome Battery icon
+          format-charging = " {capacity}%";            # Font Awesome Plug icon
+        };
+        clock = {
+          format = " {:%Y-%m-%d %H:%M}";
+        };
+      }
+    ];
 
-      menus.dashboard.directories.enabled = false;
-      menus.dashboard.stats.enable_gpu = true;
-
-      theme = {
-        bar.transparent = true;
-        font.size = "1em";
-      };
-
-      terminal = "${pkgs.wezterm}/bin/wezterm";
-
-      # theme.font = {
-      #   name = "CaskaydiaCove NF";
-      #   size = "16px";
-      # };
-    };
+    style = ''
+      #workspaces button.active {
+        background: #ffa000;
+        color: #222222;
+      }
+    '';
   };
 
   services.hypridle = {
