@@ -42,6 +42,7 @@
         "$mod SHIFT, l, movewindow, r"
 
         "$mod, t, togglegroup"
+        "$mod, f, fullscreen"
 
         "$mod SHIFT, semicolon, exec, swaylock"
       ] ++ (
@@ -78,7 +79,11 @@
       {
         layer = "top";
         position = "top";
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [
+          "hyprland/workspaces"
+          "hyprland/mode"
+          "hyprland/scratchpad"
+        ];
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "cpu"
@@ -133,9 +138,181 @@
     ];
 
     style = ''
+      /* Colors (dracula) */
+      @define-color foreground	#f8f8f2;
+      @define-color background	rgba(40, 42, 54, 0.5);
+      @define-color orange	#ffb86c;
+      @define-color gray	#44475a;
+      @define-color black #21222c;
+      @define-color red	#ff5555;
+      @define-color green	#50fa7b;
+      @define-color yellow	#f1fa8c;
+      @define-color cyan	#8be9fd;
+      @define-color blue	#6272a4;
+      @define-color purple	#bd93f9;
+      @define-color pink	#ff79c6;
+      @define-color white #ffffff;
+      @define-color brred #ff6e6e;
+      @define-color brgreen #69ff94;
+      @define-color bryellow #ffffa5;
+      @define-color brcyan #a4ffff;
+      @define-color brblue #6272a4;
+      @define-color brpurple #d6acff;
+      @define-color brpink #ff92df;
+
+      @define-color arch_blue #89b4fa;
+
+      @define-color workspace_background	@background;
+      @define-color workspace_button	@foreground;
+      @define-color workspace_active	@black;
+      @define-color workspace_active_background	@green;
+      @define-color workspace_urgent	@white;
+      @define-color workspace_urgent_background	@brred;
+      @define-color workspace_hover	@black;
+      @define-color workspace_hover_background	@pink;
+      @define-color critical	@red;
+      @define-color warning	@yellow;
+
+
+      @keyframes blink {
+          to {
+              background-color: @white;
+              color: @black;
+          }
+      }
+
+      * {
+          border: none;
+          border-radius: 0;
+          font-family: "monospace";
+          font-weight: bold;
+          font-size: 12px;
+          min-height: 0;
+      }
+
+      window#waybar {
+          background: transparent;
+      	  color: @foreground;
+      }
+
+      #workspaces {
+          background: @workspace_background;
+          opacity: 1;
+          transition: none;
+          padding: 5px 5px;
+          border-radius: 5px;
+      }
+
+      #workspaces button, #workspaces button.persistent {
+          background: transparent;
+          color: @workspace_button;
+          transition: none;
+      }
+
       #workspaces button.active {
-        background: #ffa000;
-        color: #222222;
+          background: @workspace_active_background;
+          color: @workspace_active;
+          border-radius: 5px;
+      /*
+          border-top: 2px solid @pink;
+          border-bottom: 2px solid @pink;
+      */
+      }
+
+      #workspaces button.urgent {
+          background: @workspace_urgent_background;
+          color: @workspace_urgent;
+          border-radius: 5px;
+      }
+
+      #workspaces button:hover {
+          background: @workspace_hover_background;
+          color: @workspace_hover;
+          border-radius: 5px;
+      }
+
+      #taskbar {
+          background: @background;
+          border-radius: 5px;
+          margin: 5px 10px 5px 50px;
+      }
+
+      tooltip {
+          background: @background;
+          opacity: 0.95;
+          border-radius: 10px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: @purple;
+      }
+
+      tooltip label{
+          color: @grey;
+      }
+
+      #cpu,
+      #disk,
+      #custom-updates,
+      #memory,
+      #clock,
+      #battery,
+      #pulseaudio,
+      #network,
+      #tray,
+      #temperature,
+      #backlight,
+      #language {
+          background: @background;
+          opacity: 1;
+          padding: 0px 5px;
+          margin: 2px 0px 2px 0px;
+      }
+
+      #disk.critical,
+      #temperature.critical  {
+          background-color: @critical;
+      }
+
+      #disk.warning,
+      #temperature.warning {
+          background-color: @warning;
+      }
+
+      #battery {
+          color: @green;
+          border-radius: 5px 0px 0px 5px;
+      }
+
+      #battery.discharging {
+          color: @foreground;
+      }
+
+      #battery.warning:not(.charging) {
+          background: @warning;
+          animation-name: blink;
+          animation-duration: 0.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+      }
+
+      #battery.critical:not(.charging) {
+          background-color: @critical;
+          animation-name: blink;
+          animation-duration: 0.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+      }
+
+      #clock {
+          border-radius: 0px 5px 5px 0px;
+      }
+
+      #tray {
+          background: @background;
+          border-radius: 5px;
+          margin: 5px 5px 5px 5px;
       }
     '';
   };
