@@ -43,6 +43,7 @@
 
         "$mod, t, togglegroup"
         "$mod, f, fullscreen"
+        "$mod, space, togglefloating"
 
         "$mod SHIFT, semicolon, exec, swaylock"
 
