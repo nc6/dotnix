@@ -341,7 +341,13 @@
     '';
   };
 
-  services.swaync.enable = true;
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      image="$HOME/Pictures/Backgrounds/IMG_20180930_140935.jpg";
+      scaling="stretch";
+    };
+  };  services.swaync.enable = true;
 
   services.hypridle = {
     enable = true;

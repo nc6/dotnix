@@ -13,7 +13,6 @@
     (import ../../modules/nushell)
     (import ../../modules/rofi.nix)
     (import ../../modules/starship.nix)
-    (import ../../modules/sway)
     (import ../../modules/vscode)
     (import ../../modules/zed-editor.nix)
   ];
