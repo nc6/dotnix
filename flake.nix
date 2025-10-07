@@ -120,6 +120,7 @@
       pkgs.mkShell {
         buildInputs = with pkgs; [
           just
+          jujutsu
           nvd
         ];
     };

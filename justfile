@@ -5,7 +5,8 @@ default: pull update rebuild commit
 sync: pull rebuild
 
 pull:
-  git pull
+  jj git fetch
+  jj new master
 
 update:
   nix flake update
@@ -23,6 +24,6 @@ rebuild:
   unlink result
 
 commit:
-  git add flake.lock modules/vscode
-  git commit -m "Routine update"
-  git push
+  jj commit -m "Routine update"
+  jj b m master --to @-
+  jj git push
