@@ -3,7 +3,7 @@
   home.packages = with pkgs.haskellPackages; [
     cabal-install
     pkgs.haskell.compiler.ghc912
-    apply-refact
+    # apply-refact
     # friendly
     ghcid
     hasktags
