@@ -37,6 +37,7 @@
     # Develpoment tools
     silver-searcher
     clang
+    gemini-cli
     gnumake
     ispell
     jq
