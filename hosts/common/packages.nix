@@ -7,7 +7,6 @@
     exfat
     htop
     neovim
-    pinentry
     wget
     wl-clipboard
   ];

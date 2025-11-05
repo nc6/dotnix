@@ -29,7 +29,7 @@
     google-chrome
     spotify
     signal-desktop-bin
-    tdesktop
+    telegram-desktop
     thunderbird
     # Disabled due to CVE-2023-5217
     # zotero
