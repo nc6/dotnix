@@ -41,6 +41,9 @@
         "$mod SHIFT, k, movewindow, u"
         "$mod SHIFT, l, movewindow, r"
 
+        "$mod SHIFT, LEFT, movecurrentworkspacetomonitor, +1"
+        "$mod SHIFT, RIGHT, movecurrentworkspacetomonitor, -1"
+
         "$mod, t, togglegroup"
         "$mod, f, fullscreen"
         "$mod, space, togglefloating"
