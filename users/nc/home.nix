@@ -37,10 +37,11 @@
     # Develpoment tools
     silver-searcher
     clang
-    gemini-cli
+    # gemini-cli
     gnumake
     ispell
     jq
+    mistral-vibe
     nix-prefetch-git
     zeal
     zoxide
