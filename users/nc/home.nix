@@ -25,6 +25,10 @@
     _1password-cli
     _1password-gui
 
+    # 3D Printing
+    openscad
+    orca-slicer
+
     # Web stuff
     google-chrome
     spotify
