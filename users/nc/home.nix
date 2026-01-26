@@ -59,6 +59,7 @@
     ghostscript
 
     # Organisation
+    anytype
     logseq
 
     # R
