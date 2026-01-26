@@ -30,6 +30,7 @@
     orca-slicer
 
     # Web stuff
+    fluffychat
     google-chrome
     spotify
     signal-desktop-bin
