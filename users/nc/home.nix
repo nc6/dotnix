@@ -39,14 +39,17 @@
     # Disabled due to CVE-2023-5217
     # zotero
 
+    # AI tools
+    claude-code
+    gemini-cli
+    mistral-vibe
+
     # Develpoment tools
     silver-searcher
     clang
-    # gemini-cli
     gnumake
     ispell
     jq
-    mistral-vibe
     nix-prefetch-git
     zeal
     zoxide
