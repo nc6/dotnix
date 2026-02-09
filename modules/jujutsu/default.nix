@@ -22,8 +22,7 @@
       git = {
         sign-on-push = true;
       };
-
-    };
+    } // builtins.fromTOML (builtins.readFile ./config.toml);
   };
 
   home.packages = with pkgs; [

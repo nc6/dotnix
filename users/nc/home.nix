@@ -5,7 +5,7 @@
     (import ../../modules/1password.nix)
     (import ../../modules/bash)
     (import ../../modules/git.nix)
-    (import ../../modules/jujutsu.nix)
+    (import ../../modules/jujutsu)
     (import ../../modules/haskell.nix)
     (import ../../modules/helix.nix)
     (import ../../modules/hyprland)
