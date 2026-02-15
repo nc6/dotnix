@@ -13,6 +13,10 @@
     };
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
     golink.url = "github:tailscale/golink";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
@@ -113,6 +117,7 @@
       inputs.disko.nixosModules.disko
       ./hosts/manwe/configuration.nix
       { hardware.facter.reportPath = ./hosts/manwe/facter.json; }
+      inputs.sops-nix.nixosModules.sops
       home-manager.nixosModules.home-manager
       {
         nix.registry.nixpkgs.flake = inputs.nixpkgs;
@@ -142,6 +147,7 @@
           just
           jujutsu
           nvd
+          sops
         ];
     };
   };

@@ -1,0 +1,5 @@
+creation_rules:
+  - path_regex: hosts/manwe/secrets\.yaml$
+    key_groups:
+      - age:
+        - "age1td0gcm9ucuq6xym0gd5v6j6etu7qvhutacf0nr7jujdg8z84854sn2fp5x"
