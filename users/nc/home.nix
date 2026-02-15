@@ -2,22 +2,13 @@
 
 {
   imports = [
+    (import ./headless.nix)
     (import ../../modules/1password.nix)
-    (import ../../modules/bash)
-    (import ../../modules/git.nix)
-    (import ../../modules/jujutsu)
-    (import ../../modules/haskell.nix)
-    (import ../../modules/helix.nix)
     (import ../../modules/hyprland)
     (import ../../modules/i3status-rs.nix)
-    (import ../../modules/nushell)
     (import ../../modules/rofi.nix)
-    (import ../../modules/starship.nix)
     (import ../../modules/vscode)
-    (import ../../modules/zed-editor.nix)
   ];
-
-  home.stateVersion = "18.09";
 
   home.packages = with pkgs; [
 
@@ -45,14 +36,7 @@
     mistral-vibe
 
     # Develpoment tools
-    silver-searcher
-    clang
-    gnumake
-    ispell
-    jq
-    nix-prefetch-git
     zeal
-    zoxide
 
     # Graphics
     kdePackages.gwenview
@@ -71,7 +55,6 @@
     # System
     alsa-utils
     bluetuith
-    btop
     cachix
     desktop-file-utils
     feh
@@ -88,13 +71,7 @@
     udiskie
     wally-cli
     xdg-utils
-    yazi
   ];
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 
   programs.wezterm.enable = true;
 
@@ -120,15 +97,6 @@
     };
 
   services.keybase.enable = true;
-
-  services.syncthing = {
-    enable = true;
-  };
-
-  home.sessionVariables = {
-    EDITOR = "${pkgs.helix}/bin/hx";
-    TERMINAL = "${pkgs.wezterm}/bin/wezterm";
-  };
 
   home.keyboard.layout = "eu";
 

@@ -3,10 +3,15 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
     golink.url = "github:tailscale/golink";
   };
 
@@ -101,19 +106,34 @@
     ];
   };
 
-  build01 = home-manager.lib.homeManagerConfiguration rec {
+  # Hetzner online
+  manwe = nixpkgs.lib.nixosSystem {
     inherit system;
-    username = "nc";
-    homeDirectory = "/home/nc";
-    configuration = import ./users/nc/home.nix;
+    modules = [
+      inputs.disko.nixosModules.disko
+      ./hosts/manwe/configuration.nix
+      { hardware.facter.reportPath = ./hosts/manwe/facter.json; }
+      home-manager.nixosModules.home-manager
+      {
+        nix.registry.nixpkgs.flake = inputs.nixpkgs;
+        nixpkgs.config = {
+          allowUnfree = true;
+        };
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.users.nc = import ./users/nc/headless.nix;
+
+        # Optionally, use home-manager.extraSpecialArgs to pass
+        # arguments to home.nix
+      }
+    ];
   };
 
   in {
     nixosConfigurations = {
-      inherit lorien varda orome ulmo;
+      inherit lorien varda orome ulmo manwe;
     };
     homeConfigurations = {
-      inherit build01;
     };
 
     devShells.${system}.default = let pkgs = nixpkgs.legacyPackages.${system}; in
