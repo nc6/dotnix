@@ -11,9 +11,23 @@
       ../common/users.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd = {
+  boot = {
+
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+
+    initrd = {
+      systemd.enable = true;
+      systemd.network = {
+        enable = true;
+        networks."10-wan" = {
+          matchConfig.Name = "en* eth*";
+          address = [ "142.132.195.27/26" ];
+          gateway = [ "142.132.195.1" ];
+          # Hetzner specific: force link to be ready
+          linkConfig.RequiredForOnline = "routable";
+        };
+      };
       # Load the network card driver early
       availableKernelModules = [ "e1000e" ];
 
@@ -21,19 +35,20 @@
         enable = true;
         ssh = {
           enable = true;
-          port = 2222; # Use a different port than your main SSH to avoid host key conflicts
+          port = 2222;
           authorizedKeys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJHpLeHabhvyaHKr0EXrchPir8yqX5UM+H6ZfaB9nx1Q" ];
           hostKeys = [ "/etc/ssh/ssh_host_initrd_key" ];
         };
       };
     };
 
-  boot.kernelParams = [
-    # Limit ZFS ARC to 16GB
-    "zfs.zfs_arc_max=16106127360"
-  ];
+    kernelParams = [
+      # Limit ZFS ARC to 16GB
+      "zfs.zfs_arc_max=16106127360"
+    ];
 
-  boot.supportedFilesystems = [ "zfs" ];
+    supportedFilesystems = [ "zfs" ];
+  };
 
   networking.hostName = "manwe"; # Define your hostname.
   networking.hostId = "007f0100";

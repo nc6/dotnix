@@ -60,7 +60,8 @@ manwe-install address:
 
     nix run github:nix-community/nixos-anywhere -- \
       --flake "$FLAKE_ATTR" \
-      --generate-hardware-config nixos-facter ./hosts/manwe/facter.json \
+      # This is already generated, no need to re-run
+      # --generate-hardware-config nixos-facter ./hosts/manwe/facter.json \
       --disk-encryption-keys zroot "$TEMP_DIR/passphrase" \
       --extra-files "$EXTRA_FILES" \
       --target-host "$TARGET_HOST"
