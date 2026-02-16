@@ -68,6 +68,31 @@
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 8080 ];
 
+  systemd.network = {
+    enable = true;
+    networks."10-wan" = {
+      matchConfig.Name = "enp0s31f6";
+      address = [
+        "142.132.195.27/26"
+        "2a01:4f8:261:3d66::1/64"
+      ];
+
+      routes = [
+        # IPv4 Gateway
+        { routeConfig.Gateway = "142.132.195.1"; }
+
+        # IPv6 Gateway
+        # Hetzner uses fe80::1 as the gateway for almost all dedicated servers
+        { routeConfig.Gateway = "fe80::1"; }
+      ];
+
+      # Essential for IPv6 link-local discovery
+      networkConfig = {
+        IPv6AcceptRA = "no"; # We are configuring manually
+      };
+    };
+  };
+
   # Enable automatic scrubbing to find bit-rot early
   services.zfs = {
     autoScrub.enable = true;
