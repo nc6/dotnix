@@ -28,6 +28,9 @@ commit:
   jj b m master --to @-
   jj git push
 
+deploy:
+  nix run github:serokell/deploy-rs
+
 # Install the server (manwe) using sops secrets and nixos-anywhere
 manwe-install address:
     #!/usr/bin/env bash

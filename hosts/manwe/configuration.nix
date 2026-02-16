@@ -65,11 +65,11 @@
     expandOnBoot = "all";
   };
 
-  # Anti-virus
-  services.clamav = {
-    updater.enable = true;
-    daemon.enable = true;
-  };
+  # # Anti-virus
+  # services.clamav = {
+  #   updater.enable = true;
+  #   daemon.enable = true;
+  # };
 
   services.openssh.enable = true;
 

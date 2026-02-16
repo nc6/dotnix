@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    deploy-rs.url = "github:serokell/deploy-rs";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -140,6 +141,16 @@
     };
     homeConfigurations = {
     };
+
+    deploy.nodes.manwe = {
+      hostname = "142.132.195.27";
+      profiles.system = {
+        sshUser = "root";
+        path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.manwe;
+      };
+    };
+
+    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) inputs.deploy-rs.lib;
 
     devShells.${system}.default = let pkgs = nixpkgs.legacyPackages.${system}; in
       pkgs.mkShell {
