@@ -17,9 +17,4 @@
       trusted-users = [ "@wheel" ];
     };
   };
-
-  # Electron 25.9.0 is EOL. Allow it for now
-  nixpkgs.config.permittedInsecurePackages = [
-    lib.optional (pkgs.obsidian.version == "1.5.3") "electron-27.3.11"
-  ];
 }
