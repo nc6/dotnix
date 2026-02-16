@@ -23,13 +23,20 @@
         networks."10-wan" = {
           matchConfig.Name = "en* eth*";
           address = [ "142.132.195.27/26" ];
-          gateway = [ "142.132.195.1" ];
+          routes = [
+            {
+              Gateway = "142.132.195.1";
+              GatewayOnLink = true;
+            }
+          ];
           # Hetzner specific: force link to be ready
           linkConfig.RequiredForOnline = "routable";
+          # This forces systemd to keep trying even if the switch is slow
+          linkConfig.ActivationPolicy = "always-up";
         };
       };
       # Load the network card driver early
-      availableKernelModules = [ "e1000e" ];
+      availableKernelModules = [ "ahci" "sd_mod" "e1000e" "xhci_pci" ];
 
       network = {
         enable = true;
@@ -45,6 +52,8 @@
     kernelParams = [
       # Limit ZFS ARC to 16GB
       "zfs.zfs_arc_max=16106127360"
+      # Try to get around potential power management NIC issues
+      "pcie_aspm=off"
     ];
 
     supportedFilesystems = [ "zfs" ];
