@@ -9,6 +9,8 @@
     [ ./disk-config.nix
       # Create users
       ../common/users.nix
+      # Nix settings
+      ../common/nix.nix
     ];
 
   boot = {
