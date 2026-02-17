@@ -63,6 +63,7 @@
 
   networking.hostName = "manwe"; # Define your hostname.
   networking.hostId = "007f0100";
+  networking.useNetworkd = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
