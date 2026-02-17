@@ -2,6 +2,7 @@
   description = "home-manager configuration";
 
   inputs = {
+    bismuth.url = "git+ssh://git@github.com/nc6/bismuth.git";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     deploy-rs.url = "github:serokell/deploy-rs";
     disko = {
@@ -119,6 +120,7 @@
       ./hosts/manwe/configuration.nix
       { hardware.facter.reportPath = ./hosts/manwe/facter.json; }
       inputs.sops-nix.nixosModules.sops
+      inputs.bismuth.nixosModules.default
       home-manager.nixosModules.home-manager
       {
         nix.registry.nixpkgs.flake = inputs.nixpkgs;

@@ -11,6 +11,8 @@
       ../common/users.nix
       # Nix settings
       ../common/nix.nix
+      # Bismuth
+      ./bismuth.nix
     ];
 
   boot = {
@@ -69,7 +71,7 @@
   time.timeZone = "Europe/Zurich";
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 8080 ];
+  networking.firewall.allowedTCPPorts = [ 8080 3000 ];
 
   systemd.network = {
     enable = true;
@@ -82,11 +84,11 @@
 
       routes = [
         # IPv4 Gateway
-        { routeConfig.Gateway = "142.132.195.1"; }
+        { Gateway = "142.132.195.1"; }
 
         # IPv6 Gateway
         # Hetzner uses fe80::1 as the gateway for almost all dedicated servers
-        { routeConfig.Gateway = "fe80::1"; }
+        { Gateway = "fe80::1"; }
       ];
 
       # Essential for IPv6 link-local discovery
