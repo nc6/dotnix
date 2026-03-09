@@ -42,7 +42,7 @@
   # Needed to support wireless printing
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
   };
 
   services.clamav = {
@@ -51,15 +51,12 @@
   };
 
   # Settings needed for steam
-  hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
+  hardware.graphics.enable32Bit = true;
+  services.pulseaudio.support32Bit = true;
 
   # Laptop specific X configuration
+  services.libinput.enable = true;
   services.xserver = {
-    libinput = {
-      enable = true;
-    };
-
     dpi = 144;
   };
 

@@ -24,7 +24,7 @@
     fluffychat
     google-chrome
     spotify
-    signal-desktop-bin
+    signal-desktop
     telegram-desktop
     thunderbird
     # Disabled due to CVE-2023-5217
@@ -78,22 +78,37 @@
   programs.ssh =
     let
       onePassPath = "~/.1password/agent.sock";
-    in {
+    in
+    {
       enable = true;
-      extraConfig = ''
-        Host *
-            IdentityAgent ${onePassPath}
-
-        Host github.com
-          HostName github.com
-          IdentitiesOnly yes
-          IdentityFile ~/.ssh/personal-ed25519.pub
-
-        Host github-shielded.com
-          HostName github.com
-          IdentitiesOnly yes
-          IdentityFile ~/.ssh/Shielded.pub
-      '';
+      enableDefaultConfig = false;
+      matchBlocks = {
+        "*" = {
+          host = "*";
+          addKeysToAgent = "no";
+          compression = true;
+          controlMaster = "auto";
+          controlPath = "'~/.ssh/master-%r@%n:%p'";
+          controlPersist = "60";
+          forwardAgent = false;
+          hashKnownHosts = true;
+          identitiesOnly = false;
+          serverAliveInterval = 60;
+          identityAgent = "${onePassPath}";
+        };
+        "github.com" = {
+          host = "github.com";
+          hostname = "github.com";
+          identitiesOnly = true;
+          identityFile = [ "~/.ssh/personal-ed25519.pub" ];
+        };
+        "github-shielded.com" = {
+          host = "github-shielded.com";
+          hostname = "github.com";
+          identitiesOnly = true;
+          identityFile = [ "~/.ssh/Shielded.pub" ];
+        };
+      };
     };
 
   services.keybase.enable = true;
