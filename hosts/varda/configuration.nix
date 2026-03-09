@@ -25,7 +25,11 @@
   networking.extraHosts = "127.0.0.1 varda";
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall = {
+    allowedUDPPorts = [ 5353 ]; # Chromecast Device discovery
+    allowedUDPPortRanges = [{ from = 32768; to = 61000; }];   # For Streaming
+  };
+
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
