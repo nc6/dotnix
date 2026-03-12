@@ -71,7 +71,7 @@
   time.timeZone = "Europe/Zurich";
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 8080 3000 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 8080 3000 ];
 
   systemd.network = {
     enable = true;
