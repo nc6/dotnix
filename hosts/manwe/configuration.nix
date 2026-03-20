@@ -13,6 +13,8 @@
       ../common/nix.nix
       # Bismuth
       ./bismuth.nix
+      # Kimai
+      ./kimai.nix
     ];
 
   boot = {

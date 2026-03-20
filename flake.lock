@@ -8,11 +8,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1773754250,
-        "narHash": "sha256-+mVf4oVhRxUwOqc7a8r2K0osYcVAmvk2JXbOPiXGXoQ=",
+        "lastModified": 1773873231,
+        "narHash": "sha256-8zEby2hvS0wUFysLGI8SezdO1C7rJYDszabj7XBY6e0=",
         "ref": "refs/heads/master",
-        "rev": "a444e6ef72a2a61956e09c3c282c674cca9fb450",
-        "revCount": 144,
+        "rev": "b378f1c6bd622b939fcbb9af7ac70033f61e7ee2",
+        "revCount": 155,
         "type": "git",
         "url": "ssh://git@github.com/nc6/bismuth.git"
       },
@@ -136,11 +136,11 @@
     },
     "nixos-facter-modules": {
       "locked": {
-        "lastModified": 1766558141,
-        "narHash": "sha256-Ud9v49ZPsoDBFuyJSQ2Mpw1ZgAH/aMwUwwzrVoetNus=",
+        "lastModified": 1773858690,
+        "narHash": "sha256-oW0/lC0oRG5H5LaK6Rmh9L1wmkn9TbenM4bXwnIEDKA=",
         "owner": "numtide",
         "repo": "nixos-facter-modules",
-        "rev": "e796d536e3d83de74267069e179dc620a608ed7d",
+        "rev": "139dcef4dfc97009629c445806f197883351ab4a",
         "type": "github"
       },
       "original": {
