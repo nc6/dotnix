@@ -15,6 +15,8 @@
       ./bismuth.nix
       # Kimai
       ./kimai.nix
+      # Affine knowledge management
+      ./affine.nix
     ];
 
   boot = {
