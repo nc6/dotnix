@@ -23,7 +23,7 @@
   virtualisation.docker.enable = true;
   virtualisation.oci-containers.backend = "docker";
   virtualisation.oci-containers.containers.affine = {
-    image = "ghcr.io/toeverything/affine-graphql:stable";
+    image = "ghcr.io/toeverything/affine:stable";
     # Host networking lets the container reach PostgreSQL and Redis on localhost
     extraOptions = [ "--network=host" ];
     volumes = [
