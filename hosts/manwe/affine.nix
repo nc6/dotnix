@@ -47,6 +47,8 @@
     environmentFiles = [ config.sops.secrets.affine_env.path ];
   };
 
+  sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+
   # Decrypt admin credentials from secrets.yaml (add affine_env key before deploying)
   sops.secrets.affine_env = {
     sopsFile = ./secrets.yaml;
