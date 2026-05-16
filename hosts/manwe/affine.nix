@@ -62,6 +62,11 @@
     '';
   };
 
+  systemd.services.docker-affine = {
+    requires = [ "docker-login-ghcr.service" ];
+    after = [ "docker-login-ghcr.service" ];
+  };
+
   systemd.tmpfiles.rules = [
     "d /var/lib/affine/config 0750 root root - -"
     "d /var/lib/affine/storage 0750 root root - -"
