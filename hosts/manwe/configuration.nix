@@ -67,6 +67,8 @@
     ];
 
     supportedFilesystems = [ "zfs" ];
+
+    zfs.forceImportRoot = false;
   };
 
   networking.hostName = "manwe"; # Define your hostname.
