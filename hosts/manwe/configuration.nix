@@ -16,7 +16,7 @@
       # Kimai
       ./kimai.nix
       # Affine knowledge management
-      ./affine.nix
+      # ./affine.nix
       # Docker registry authentication
       ./docker-ghcr-login.nix
     ];
