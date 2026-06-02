@@ -17,4 +17,9 @@
       trusted-users = [ "@wheel" ];
     };
   };
+
+  # Temporarily allow insecure version of electron
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
 }
