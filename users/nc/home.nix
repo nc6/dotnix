@@ -73,7 +73,27 @@
     xdg-utils
   ];
 
-  programs.wezterm.enable = true;
+  programs.wezterm = {
+    enable = true;
+    extraConfig = ''
+      local wezterm = require 'wezterm'
+      local config = wezterm.config_builder()
+
+      config.unix_domains = {
+        { name = 'local' },
+      }
+
+      config.ssh_domains = {
+        { name = 'orome', remote_address = 'orome' },
+        { name = 'ulmo', remote_address = 'ulmo' },
+        { name = 'manwe', remote_address = 'manwe' },
+      }
+
+      return config
+    '';
+  };
+
+  services.wezterm-mux-server.enable = true;
 
   programs.ssh =
     let
