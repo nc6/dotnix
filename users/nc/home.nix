@@ -18,7 +18,7 @@
     _1password-gui
 
     # 3D Printing
-    openscad
+    # openscad
     orca-slicer
 
     # Web stuff
