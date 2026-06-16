@@ -19,7 +19,7 @@
   home.packages = with pkgs; [
 
     # Develpoment tools
-    silver-searcher
+    ripgrep
     clang
     gnumake
     ispell
