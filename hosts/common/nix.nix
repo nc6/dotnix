@@ -5,6 +5,7 @@
        experimental-features = nix-command flakes
     '';
     settings = {
+      auto-optimise-store = true;
       substituters = [
         "https://cache.nixos.org"
         "https://cache.iog.io"
@@ -16,7 +17,15 @@
       ];
       trusted-users = [ "@wheel" ];
     };
+
+    gc.automatic = true;
+    gc.dates = "weekly";
+    gc.options = "--delete-older-then 30d";
+
   };
+
+  # Limit the number of configurations to prevent the boot partition filling
+  boot.loader.systemd-boot.configurationLimit = 5;
 
   # Temporarily allow insecure version of electron
   nixpkgs.config.permittedInsecurePackages = [
