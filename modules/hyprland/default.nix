@@ -2,88 +2,68 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "lua";
     settings = {
-      "$mod" = "Mod4";
-      "$terminal" = "${pkgs.wezterm}/bin/wezterm";
-
-      binds = {
-        drag_threshold = 10;
+      mod      = { _var = "SUPER"; };
+      terminal = { _var = "${pkgs.wezterm}/bin/wezterm"; };
+      config = {
+        binds   = { drag_threshold = 10; };
+        input   = { kb_layout = "eu"; follow_mouse = 1; };
+        general = {
+          gaps_in = 1;
+          gaps_out = 1;
+          border_size = 1;
+          resize_on_border = true;
+          layout = "dwindle";
+        };
       };
-
-      input = {
-        kb_layout = "eu";
-        follow_mouse = 1;
-      };
-
-      general = {
-        gaps_in = 1;
-        gaps_out = 1;
-        border_size = 1;
-
-        resize_on_border = true;
-
-        layout = "dwindle";
-      };
-
-      bind = [
-        "$mod, return, exec, $terminal"
-        "$mod SHIFT, q, killactive"
-        "$mod, d, exec, ${pkgs.rofi}/bin/rofi -show combi -combi-modes \"drun,run,window\" -modes \"combi,ssh\""
-        "$mod, c, exec, rofi -show calc -modi calc -no-show-match -no-sort"
-
-        "$mod, h, movefocus, l"
-        "$mod, j, movefocus, d"
-        "$mod, k, movefocus, u"
-        "$mod, l, movefocus, r"
-
-        "$mod SHIFT, h, movewindow, l"
-        "$mod SHIFT, j, movewindow, d"
-        "$mod SHIFT, k, movewindow, u"
-        "$mod SHIFT, l, movewindow, r"
-
-        "$mod SHIFT, LEFT, movecurrentworkspacetomonitor, +1"
-        "$mod SHIFT, RIGHT, movecurrentworkspacetomonitor, -1"
-
-        "$mod, t, togglegroup"
-        "$mod, f, fullscreen"
-        "$mod, space, togglefloating"
-
-        "$mod SHIFT, semicolon, exec, swaylock"
-
-        "$mod SHIFT, minus, movetoworkspace, special:scratch"
-        "$mod, minus, togglespecialworkspace, scratch"
-
-        "$mod, V, exec, voxtype record start"
-      ] ++ (
-        # workspaces
-        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-        builtins.concatLists (builtins.genList (i:
-            let ws = i + 1;
-            in [
-              "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-            ]
-          )
-          9)
-      );
-
-      bindr = [
-        "$mod, V, exec, voxtype record stop"
-      ];
-
-      bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
-      ];
-
-      exec-once = [
-        "hyprpanel"
-        "udiskie --tray"
-      ];
-
-      # Allow local overrides in order to iteratively build config
-      source = "~/.config/hypr/local.conf";
     };
+    extraConfig = ''
+      hl.on("hyprland.start", function()
+        hl.exec_cmd("hyprpanel")
+        hl.exec_cmd("udiskie --tray")
+      end)
+
+      hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+      hl.bind(mod .. " + SHIFT + Q", hl.dsp.window.close())
+      hl.bind(mod .. " + D", hl.dsp.exec_cmd([[${pkgs.rofi}/bin/rofi -show combi -combi-modes "drun,run,window" -modes "combi,ssh"]]))
+      hl.bind(mod .. " + C", hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort"))
+
+      hl.bind(mod .. " + H", hl.dsp.focus({ direction = "left" }))
+      hl.bind(mod .. " + J", hl.dsp.focus({ direction = "down" }))
+      hl.bind(mod .. " + K", hl.dsp.focus({ direction = "up" }))
+      hl.bind(mod .. " + L", hl.dsp.focus({ direction = "right" }))
+
+      hl.bind(mod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+      hl.bind(mod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+      hl.bind(mod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+      hl.bind(mod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+
+      hl.bind(mod .. " + SHIFT + LEFT",  hl.dsp.focus({ workspace = "e+1" }))
+      hl.bind(mod .. " + SHIFT + RIGHT", hl.dsp.focus({ workspace = "e-1" }))
+
+      hl.bind(mod .. " + T",     hl.dsp.group.toggle())
+      hl.bind(mod .. " + F",     hl.dsp.window.fullscreen())
+      hl.bind(mod .. " + SPACE", hl.dsp.window.float())
+
+      hl.bind(mod .. " + SHIFT + SEMICOLON", hl.dsp.exec_cmd("swaylock"))
+      hl.bind(mod .. " + SHIFT + MINUS", hl.dsp.window.move({ workspace = "special:scratch" }))
+      hl.bind(mod .. " + MINUS", hl.dsp.workspace.toggle_special("scratch"))
+
+      hl.bind(mod .. " + V", hl.dsp.exec_cmd("voxtype record start"))
+      hl.bind(mod .. " + V", hl.dsp.exec_cmd("voxtype record stop"), { release = true })
+
+      hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
+      hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+      for i = 0, 8 do
+        local ws = i + 1
+        hl.bind(mod .. " + code:" .. (10 + i), hl.dsp.focus({ workspace = ws }))
+        hl.bind(mod .. " + SHIFT + code:" .. (10 + i), hl.dsp.window.move({ workspace = ws }))
+      end
+
+      pcall(require, "local")
+    '';
   };
 
   programs.waybar = {
