@@ -52,6 +52,8 @@
 
         "$mod SHIFT, minus, movetoworkspace, special:scratch"
         "$mod, minus, togglespecialworkspace, scratch"
+
+        "$mod, V, exec, voxtype record start"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
@@ -64,6 +66,10 @@
           )
           9)
       );
+
+      bindr = [
+        "$mod, V, exec, voxtype record stop"
+      ];
 
       bindm = [
         "$mod, mouse:272, movewindow"

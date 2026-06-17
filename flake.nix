@@ -19,6 +19,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    voxtype = {
+      url = "github:peteonrails/voxtype";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
@@ -41,9 +45,8 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.nc = import ./users/nc/home.nix;
-
-        # Optionally, use home-manager.extraSpecialArgs to pass
-        # arguments to home.nix
+        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
+        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
       }
     ];
   };
@@ -62,9 +65,8 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.nc = import ./users/nc/home.nix;
-
-        # Optionally, use home-manager.extraSpecialArgs to pass
-        # arguments to home.nix
+        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
+        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
       }
     ];
   };
@@ -83,9 +85,8 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.nc = import ./users/nc/home.nix;
-
-        # Optionally, use home-manager.extraSpecialArgs to pass
-        # arguments to home.nix
+        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
+        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
       }
     ];
   };
@@ -105,9 +106,8 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.nc = import ./users/nc/home.nix;
-
-        # Optionally, use home-manager.extraSpecialArgs to pass
-        # arguments to home.nix
+        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
+        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
       }
     ];
   };

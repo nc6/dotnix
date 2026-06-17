@@ -1,5 +1,5 @@
 
-{ pkgs, extraSources, ... }:
+{ pkgs, extraSources ? {}, ... }:
 
 {
   imports = [

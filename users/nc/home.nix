@@ -1,4 +1,4 @@
-{ pkgs, extraSources, ... }:
+{ pkgs, extraSources ? {}, ... }:
 
 {
   imports = [
@@ -7,6 +7,7 @@
     (import ../../modules/hyprland)
     (import ../../modules/i3status-rs.nix)
     (import ../../modules/rofi.nix)
+    (import ../../modules/voxtype.nix)
     (import ../../modules/vscode)
     (import ../../modules/wezterm)
   ];
