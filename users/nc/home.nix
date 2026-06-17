@@ -82,31 +82,28 @@
     {
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = {
+      settings = {
         "*" = {
-          host = "*";
-          addKeysToAgent = "no";
-          compression = true;
-          controlMaster = "auto";
-          controlPath = "'~/.ssh/master-%r@%n:%p'";
-          controlPersist = "60";
-          forwardAgent = false;
-          hashKnownHosts = true;
-          identitiesOnly = false;
-          serverAliveInterval = 60;
-          identityAgent = "${onePassPath}";
+          AddKeysToAgent = "no";
+          Compression = true;
+          ControlMaster = "auto";
+          ControlPath = "'~/.ssh/master-%r@%n:%p'";
+          ControlPersist = "60";
+          ForwardAgent = false;
+          HashKnownHosts = true;
+          IdentitiesOnly = false;
+          ServerAliveInterval = 60;
+          IdentityAgent = "${onePassPath}";
         };
         "github.com" = {
-          host = "github.com";
-          hostname = "github.com";
-          identitiesOnly = true;
-          identityFile = [ "~/.ssh/personal-ed25519.pub" ];
+          HostName = "github.com";
+          IdentitiesOnly = true;
+          IdentityFile = [ "~/.ssh/personal-ed25519.pub" ];
         };
         "github-shielded.com" = {
-          host = "github-shielded.com";
-          hostname = "github.com";
-          identitiesOnly = true;
-          identityFile = [ "~/.ssh/Shielded.pub" ];
+          HostName = "github.com";
+          IdentitiesOnly = true;
+          IdentityFile = [ "~/.ssh/Shielded.pub" ];
         };
       };
     };

@@ -32,8 +32,8 @@
   specialArgs = { inherit inputs; };
 
   lorien = nixpkgs.lib.nixosSystem {
-    inherit system;
     modules = [
+      { nixpkgs.hostPlatform.system = system; }
       ./hosts/common
       ./hosts/lorien/configuration.nix
       home-manager.nixosModules.home-manager
@@ -52,8 +52,8 @@
   };
 
   varda = nixpkgs.lib.nixosSystem {
-    inherit system;
     modules = [
+      { nixpkgs.hostPlatform.system = system; }
       ./hosts/common
       ./hosts/varda/configuration.nix
       home-manager.nixosModules.home-manager
@@ -72,8 +72,8 @@
   };
 
   orome = nixpkgs.lib.nixosSystem {
-    inherit system;
     modules = [
+      { nixpkgs.hostPlatform.system = system; }
       ./hosts/common
       ./hosts/orome/configuration.nix
       home-manager.nixosModules.home-manager
@@ -92,8 +92,8 @@
   };
 
   ulmo = nixpkgs.lib.nixosSystem {
-    inherit system;
     modules = [
+      { nixpkgs.hostPlatform.system = system; }
       ./hosts/common
       ./hosts/ulmo/configuration.nix
       inputs.golink.nixosModules.default
@@ -114,8 +114,8 @@
 
   # Hetzner online
   manwe = nixpkgs.lib.nixosSystem {
-    inherit system;
     modules = [
+      { nixpkgs.hostPlatform.system = system; }
       inputs.disko.nixosModules.disko
       ./hosts/manwe/configuration.nix
       { hardware.facter.reportPath = ./hosts/manwe/facter.json; }
