@@ -105,6 +105,7 @@
           "backlight"
           "pulseaudio"
           "battery"
+          "custom/voxtype"
           "tray"
           "custom/notification"
           "clock"
@@ -148,6 +149,13 @@
         clock = {
           format = " {:%Y-%m-%d %H:%M}";
         };
+        "custom/voxtype" = {
+          exec = "voxtype status --follow --format json --extended";
+          return-type = "json";
+          format = "{}";
+          tooltip = true;
+        };
+
         "custom/notification" = {
           tooltip = false;
           format = "{icon}";
@@ -294,7 +302,8 @@
       #tray,
       #temperature,
       #backlight,
-      #language {
+      #language,
+      #custom-voxtype {
           background: @background;
           opacity: 1;
           padding: 0px 5px;
@@ -340,6 +349,23 @@
 
       #clock {
           border-radius: 0px 5px 5px 0px;
+      }
+
+      #custom-voxtype.recording {
+          color: @red;
+          animation-name: pulse;
+          animation-duration: 1s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+      }
+
+      #custom-voxtype.transcribing {
+          color: @yellow;
+      }
+
+      @keyframes pulse {
+          to { opacity: 0.5; }
       }
 
       #tray {
