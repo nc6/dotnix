@@ -31,84 +31,37 @@
 
   specialArgs = { inherit inputs; };
 
+  desktopModules = extraModules: [
+    { nixpkgs.hostPlatform.system = system; }
+    ./hosts/common
+    home-manager.nixosModules.home-manager
+    {
+      nix.registry.nixpkgs.flake = inputs.nixpkgs;
+      nixpkgs.config = { allowUnfree = true; };
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.nc = import ./users/nc/home.nix;
+      home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
+      home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
+    }
+  ] ++ extraModules;
+
   lorien = nixpkgs.lib.nixosSystem {
-    modules = [
-      { nixpkgs.hostPlatform.system = system; }
-      ./hosts/common
-      ./hosts/lorien/configuration.nix
-      home-manager.nixosModules.home-manager
-      {
-        nix.registry.nixpkgs.flake = inputs.nixpkgs;
-        nixpkgs.config = {
-          allowUnfree = true;
-        };
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.nc = import ./users/nc/home.nix;
-        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
-        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
-      }
-    ];
+    modules = desktopModules [ ./hosts/lorien/configuration.nix ];
   };
 
   varda = nixpkgs.lib.nixosSystem {
-    modules = [
-      { nixpkgs.hostPlatform.system = system; }
-      ./hosts/common
-      ./hosts/varda/configuration.nix
-      home-manager.nixosModules.home-manager
-      {
-        nix.registry.nixpkgs.flake = inputs.nixpkgs;
-        nixpkgs.config = {
-          allowUnfree = true;
-        };
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.nc = import ./users/nc/home.nix;
-        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
-        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
-      }
-    ];
+    modules = desktopModules [ ./hosts/varda/configuration.nix ];
   };
 
   orome = nixpkgs.lib.nixosSystem {
-    modules = [
-      { nixpkgs.hostPlatform.system = system; }
-      ./hosts/common
-      ./hosts/orome/configuration.nix
-      home-manager.nixosModules.home-manager
-      {
-        nix.registry.nixpkgs.flake = inputs.nixpkgs;
-        nixpkgs.config = {
-          allowUnfree = true;
-        };
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.nc = import ./users/nc/home.nix;
-        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
-        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
-      }
-    ];
+    modules = desktopModules [ ./hosts/orome/configuration.nix ];
   };
 
   ulmo = nixpkgs.lib.nixosSystem {
-    modules = [
-      { nixpkgs.hostPlatform.system = system; }
-      ./hosts/common
+    modules = desktopModules [
       ./hosts/ulmo/configuration.nix
       inputs.golink.nixosModules.default
-      home-manager.nixosModules.home-manager
-      {
-        nix.registry.nixpkgs.flake = inputs.nixpkgs;
-        nixpkgs.config = {
-          allowUnfree = true;
-        };
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.nc = import ./users/nc/home.nix;
-        home-manager.extraSpecialArgs = { voxtype = inputs.voxtype; };
-        home-manager.sharedModules = [ inputs.voxtype.homeManagerModules.default ];
-      }
     ];
   };
 
