@@ -20,7 +20,7 @@
     };
     extraConfig = ''
       hl.on("hyprland.start", function()
-        hl.exec_cmd("hyprpanel")
+        hl.exec_cmd("waybar")
         hl.exec_cmd("udiskie --tray")
       end)
 
@@ -91,9 +91,9 @@
           "clock"
         ];
         "hyprland/workspaces" = {
-          format = "{icon}";
-          on-scroll-up = "hyprctl dispatch workspace e+1";
-          on-scroll-down = "hyprctl dispatch workspace e-1";
+          format = "{id}";
+          on-scroll-up = "hyprctl dispatch hl.dsp.focus\\(\\{ workspace = \\\"e+1\\\" \\}\\)";
+          on-scroll-down = "hyprctl dispatch hl.dsp.focus\\(\\{ workspace = \\\"e-1\\\" \\}\\)";
         };
         "hyprland/window" = {
           separate-outputs = true;
@@ -368,7 +368,7 @@
     enable = true;
     settings = {
       general = {
-        after_sleep_cmd = "hyprctl dispatch dpms on";
+        after_sleep_cmd = "${pkgs.wlopm}/bin/wlopm --on '*'";
         ignore_dbus_inhibit = false;
         lock_cmd = "swaylock";
       };
@@ -380,8 +380,8 @@
         }
         {
           timeout = 1200;
-          on-timeout = "hyprctl dispatch dpms off";
-          on-resume = "hyprctl dispatch dpms on";
+          on-timeout = "${pkgs.wlopm}/bin/wlopm --off '*'";
+          on-resume = "${pkgs.wlopm}/bin/wlopm --on '*'";
         }
       ];
     };
