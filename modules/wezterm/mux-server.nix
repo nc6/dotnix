@@ -5,13 +5,14 @@
     Unit = {
       Description = "WezTerm multiplexer server";
       After = [ "graphical-session.target" ];
+      PartOf = [ "graphical-session.target" ];
     };
     Service = {
       ExecStart = "${pkgs.wezterm}/bin/wezterm-mux-server";
       Restart = "on-failure";
     };
     Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 }
