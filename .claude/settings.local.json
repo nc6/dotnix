@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(gh api *)",
-      "Bash(nix run *)"
+      "Bash(nix run *)",
+      "Bash(nix eval *)"
     ]
   }
 }

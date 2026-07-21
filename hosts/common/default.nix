@@ -52,6 +52,17 @@
   # Needed for hyprland
   programs.hyprland.enable = true;
 
+  # Manage the Wayland session (hyprland) via UWSM so it gets bound into
+  # graphical-session.target, xdg-desktop-autostart.target, etc.
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors.hyprland = {
+      prettyName = "Hyprland";
+      comment = "Hyprland compositor managed by UWSM";
+      binPath = "/run/current-system/sw/bin/Hyprland";
+    };
+  };
+
   # Enable dconf
   programs.dconf.enable = true;
 

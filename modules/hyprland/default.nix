@@ -3,6 +3,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "lua";
+    # Session lifecycle (graphical-session.target etc.) is managed by UWSM
+    # instead, see programs.uwsm in hosts/common.
+    systemd.enable = false;
     settings = {
       mod      = { _var = "SUPER"; };
       terminal = { _var = "${pkgs.wezterm}/bin/wezterm"; };
@@ -20,6 +23,7 @@
     };
     extraConfig = ''
       hl.on("hyprland.start", function()
+        hl.exec_cmd("uwsm finalize")
         hl.exec_cmd("waybar")
         hl.exec_cmd("udiskie --tray")
       end)
