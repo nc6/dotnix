@@ -34,8 +34,8 @@
 
     # AI tools
     claude-code
-    gemini-cli
-    mistral-vibe
+    # gemini-cli
+    # mistral-vibe
 
     # Develpoment tools
     zeal
