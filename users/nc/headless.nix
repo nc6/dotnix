@@ -11,7 +11,6 @@
     (import ../../modules/nushell)
     (import ../../modules/starship.nix)
     (import ../../modules/zed-editor.nix)
-    (import ../../modules/wezterm/mux-server.nix)
   ];
 
   home.stateVersion = "18.09";

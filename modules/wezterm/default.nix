@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./mux-server.nix ];
-
   programs.wezterm = {
     enable = true;
     extraConfig = ''
@@ -19,6 +17,23 @@
       config.unix_domains = {
         { name = 'local-mux' },
       }
+
+      -- Everything lives in the mux, so panes survive the GUI and can be
+      -- reattached from anywhere. Each launch gets its own workspace, so a
+      -- new window still opens blank rather than showing another window's
+      -- panes. Reattach one with `wezterm connect local-mux --workspace NAME`,
+      -- or browse them with LEADER-s.
+      config.default_domain = 'local-mux'
+
+      wezterm.on('gui-startup', function(cmd)
+        local name = 'w' .. os.date('%H%M%S')
+        wezterm.mux.spawn_window {
+          domain = { DomainName = 'local-mux' },
+          workspace = name,
+          args = cmd and cmd.args or nil,
+        }
+        wezterm.mux.set_active_workspace(name)
+      end)
 
       config.ssh_domains = {
         { name = 'orome', remote_address = 'orome' },
@@ -57,6 +72,36 @@
           key = 'w',
           mods = 'LEADER',
           action = wezterm.action.ShowTabNavigator,
+        },
+        {
+          key = 'm',
+          mods = 'LEADER',
+          action = wezterm.action.AttachDomain 'local-mux',
+        },
+        {
+          key = 'M',
+          mods = 'LEADER',
+          action = wezterm.action.DetachDomain { DomainName = 'local-mux' },
+        },
+        {
+          key = 's',
+          mods = 'LEADER',
+          action = wezterm.action.ShowLauncherArgs { flags = 'WORKSPACES' },
+        },
+        {
+          key = 'r',
+          mods = 'LEADER',
+          action = wezterm.action.PromptInputLine {
+            description = 'Rename workspace',
+            action = wezterm.action_callback(function(window, pane, line)
+              if line and line ~= "" then
+                wezterm.mux.rename_workspace(
+                  wezterm.mux.get_active_workspace(),
+                  line
+                )
+              end
+            end),
+          },
         },
         { key = 'V', mods = 'CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
       }
