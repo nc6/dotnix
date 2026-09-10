@@ -29,6 +29,9 @@
       end)
 
       hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+      -- Persistent, remotely attachable terminal: a fresh mux workspace each time.
+      -- Reattach later with: wezterm connect local-mux --workspace NAME
+      hl.bind(mod .. " + SHIFT + RETURN", hl.dsp.exec_cmd([[sh -c '${pkgs.wezterm}/bin/wezterm connect local-mux --workspace w$(date +%H%M%S)']]))
       hl.bind(mod .. " + SHIFT + Q", hl.dsp.window.close())
       hl.bind(mod .. " + D", hl.dsp.exec_cmd([[${pkgs.rofi}/bin/rofi -show combi -combi-modes "drun,run,window" -modes "combi,ssh"]]))
       hl.bind(mod .. " + C", hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort"))

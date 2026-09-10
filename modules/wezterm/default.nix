@@ -14,26 +14,13 @@
       config.use_fancy_tab_bar = false
       config.xcursor_theme = "Yaru"
 
+      -- New windows are local and blank. For a persistent, remotely
+      -- attachable session use:
+      --   wezterm connect local-mux --workspace NAME
+      -- or attach the current window with LEADER-m.
       config.unix_domains = {
         { name = 'local-mux' },
       }
-
-      -- Everything lives in the mux, so panes survive the GUI and can be
-      -- reattached from anywhere. Each launch gets its own workspace, so a
-      -- new window still opens blank rather than showing another window's
-      -- panes. Reattach one with `wezterm connect local-mux --workspace NAME`,
-      -- or browse them with LEADER-s.
-      config.default_domain = 'local-mux'
-
-      wezterm.on('gui-startup', function(cmd)
-        local name = 'w' .. os.date('%H%M%S')
-        wezterm.mux.spawn_window {
-          domain = { DomainName = 'local-mux' },
-          workspace = name,
-          args = cmd and cmd.args or nil,
-        }
-        wezterm.mux.set_active_workspace(name)
-      end)
 
       config.ssh_domains = {
         { name = 'orome', remote_address = 'orome' },
