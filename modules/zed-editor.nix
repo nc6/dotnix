@@ -2,33 +2,66 @@
 {
   config = {
     programs.zed-editor = {
-      enable = true;  
+      enable = true;
 
-      userSettings = {
-        "agent" = {
-          "default_model" = {
-            "provider" = "zed.dev";
-            "model" = "claude-3-7-sonnet-latest";
+      userSettings =
+        {
+          languages = {
+            Typst = {
+              format_on_save = "on";
+            };
           };
-          "version" = "2";
+          project_panel = {
+            dock = "left";
+          };
+          outline_panel = {
+            dock = "left";
+          };
+          collaboration_panel = {
+            dock = "left";
+          };
+          git_panel = {
+            dock = "left";
+          };
+          agent = {
+            dock = "right";
+            inline_assistant_model = {
+              provider = "zed.dev";
+              model = "claude-sonnet-4";
+            };
+            default_model = {
+              model = "claude-3-7-sonnet-latest";
+              provider = "zed.dev";
+            };
+          };
+          buffer_font_size = 14;
+          show_completions_on_input = false;
+          show_edit_predictions = false;
+          show_wrap_guides = true;
+          tab_size = 2;
+          theme = {
+            dark = "One Dark";
+            light = "Gruvbox Dark Soft";
+            mode = "system";
+          };
+          ui_font_size = 14;
+          helix_mode = true;
+          wrap_guides = [
+            80
+            100
+          ];
+          lsp = {
+            tinymist = {
+              initialization_options = {
+                preview = {
+                  background = {
+                    enabled = true;
+                  };
+                };
+              };
+            };
+          };
         };
-        "vim_mode" = true;
-        "vim" = {
-          "default_mode" = "helix_normal";
-        };
-        "ui_font_size" = 14;
-        "buffer_font_size" = 14;
-        "theme" = {
-          "mode" = "system";
-          "light" = "Gruvbox Dark Soft";
-          "dark" = "One Dark";
-        };
-        "show_wrap_guides" = true;
-        "wrap_guides" = [80 100];
-        "tab_size" = 2;
-        "show_edit_predictions" = false;
-        "show_completions_on_input" = false;
-      };
     };
   };
 }
