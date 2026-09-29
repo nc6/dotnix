@@ -1,4 +1,4 @@
-{pkgs, lib, ...}:
+{config, pkgs, lib, ...}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -53,7 +53,7 @@
       hl.bind(mod .. " + F",     hl.dsp.window.fullscreen())
       hl.bind(mod .. " + SPACE", hl.dsp.window.float())
 
-      hl.bind(mod .. " + SHIFT + SEMICOLON", hl.dsp.exec_cmd("swaylock"))
+      hl.bind(mod .. " + SHIFT + SEMICOLON", hl.dsp.exec_cmd("loginctl lock-session"))
       hl.bind(mod .. " + SHIFT + MINUS", hl.dsp.window.move({ workspace = "special:scratch" }))
       hl.bind(mod .. " + MINUS", hl.dsp.workspace.toggle_special("scratch"))
 
@@ -363,27 +363,72 @@
     '';
   };
 
-  programs.swaylock = {
+  # hyprlock runs password (PAM) and fingerprint (fprintd over D-Bus) auth in
+  # parallel, so either works without submitting an empty password first.
+  # The hyprlock PAM service must therefore NOT include pam_fprintd, see
+  # hosts/common.
+  programs.hyprlock = {
     enable = true;
     settings = {
-      image="$HOME/Pictures/Backgrounds/IMG_20180930_140935.jpg";
-      scaling="stretch";
+      general = {
+        hide_cursor = true;
+        ignore_empty_input = true;
+      };
+
+      auth = {
+        "pam:enabled" = true;
+        "fingerprint:enabled" = true;
+        "fingerprint:ready_message" = "Scan fingerprint to unlock";
+        "fingerprint:present_message" = "Scanning...";
+      };
+
+      background = [
+        {
+          path = "${config.home.homeDirectory}/Pictures/Backgrounds/IMG_20180930_140935.jpg";
+        }
+      ];
+
+      input-field = [
+        {
+          size = "300, 50";
+          position = "0, -80";
+          halign = "center";
+          valign = "center";
+          fade_on_empty = false;
+          placeholder_text = "Password";
+          fail_text = "$FAIL ($ATTEMPTS)";
+        }
+      ];
+
+      label = [
+        {
+          # Fingerprint prompt / failure messages
+          text = "$FPRINTPROMPT";
+          position = "0, -150";
+          halign = "center";
+          valign = "center";
+          font_size = 14;
+        }
+      ];
     };
-  };  services.swaync.enable = true;
+  };
+
+  services.swaync.enable = true;
 
   services.hypridle = {
     enable = true;
     settings = {
       general = {
         after_sleep_cmd = "${pkgs.wlopm}/bin/wlopm --on '*'";
+        before_sleep_cmd = "loginctl lock-session";
         ignore_dbus_inhibit = false;
-        lock_cmd = "swaylock";
+        lock_cmd = "pidof hyprlock || hyprlock";
       };
 
       listener = [
         {
           timeout = 900;
-          on-timeout = "swaylock";
+          on-timeout = "loginctl lock-session";
         }
         {
           timeout = 1200;

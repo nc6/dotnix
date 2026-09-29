@@ -46,8 +46,10 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
-  # Needed to run swaylock under home-manager
-  security.pam.services.swaylock = {};
+  # Needed to run hyprlock under home-manager. Fingerprint auth is handled by
+  # hyprlock itself (via fprintd D-Bus) in parallel with the password, so keep
+  # pam_fprintd out of this stack or PAM blocks waiting on the finger first.
+  security.pam.services.hyprlock.fprintAuth = false;
 
   # Needed for hyprland
   programs.hyprland.enable = true;
