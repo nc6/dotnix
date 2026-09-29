@@ -13,8 +13,6 @@
       function ghci9with () {
         nix-shell -p "haskell.packages.ghc924.ghcWithPackages (pkgs: with pkgs; [$*])" --run ghci
       }
-
-      eval "$(zoxide init bash)"
     '';
   };
 }

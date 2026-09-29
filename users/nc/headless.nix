@@ -24,7 +24,6 @@
     ispell
     jq
     nix-prefetch-git
-    zoxide
 
     # System
     btop
@@ -36,6 +35,8 @@
     xdg-utils
     yazi
   ];
+
+  programs.zoxide.enable = true;
 
   programs.direnv = {
     enable = true;
