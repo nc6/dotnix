@@ -46,8 +46,11 @@
       hl.bind(mod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
       hl.bind(mod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 
-      hl.bind(mod .. " + SHIFT + LEFT",  hl.dsp.focus({ workspace = "e+1" }))
-      hl.bind(mod .. " + SHIFT + RIGHT", hl.dsp.focus({ workspace = "e-1" }))
+      -- Focus the adjacent monitor, or carry the current workspace over to it.
+      hl.bind(mod .. " + LEFT",          hl.dsp.focus({ monitor = "l" }))
+      hl.bind(mod .. " + RIGHT",         hl.dsp.focus({ monitor = "r" }))
+      hl.bind(mod .. " + SHIFT + LEFT",  hl.dsp.workspace.move({ monitor = "l" }))
+      hl.bind(mod .. " + SHIFT + RIGHT", hl.dsp.workspace.move({ monitor = "r" }))
 
       hl.bind(mod .. " + T",     hl.dsp.group.toggle())
       hl.bind(mod .. " + F",     hl.dsp.window.fullscreen())
