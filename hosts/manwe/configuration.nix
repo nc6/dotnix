@@ -13,8 +13,6 @@
       ../common/nix.nix
       # Bismuth
       ./bismuth.nix
-      # Kimai
-      ./kimai.nix
       # Affine knowledge management
       # ./affine.nix
       # Docker registry authentication
