@@ -15,6 +15,8 @@
       ./bismuth.nix
       # Affine knowledge management
       # ./affine.nix
+      # Immich photo management
+      ./immich.nix
       # Docker registry authentication
       ./docker-ghcr-login.nix
     ];
