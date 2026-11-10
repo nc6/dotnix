@@ -61,6 +61,9 @@
   # entry itself is defined in greeter.nix.
   programs.uwsm.enable = true;
 
+  # For network diagnostics
+  programs.mtr.enable = true;
+
   # Enable dconf
   programs.dconf.enable = true;
 
