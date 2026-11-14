@@ -63,10 +63,6 @@
     modules = desktopModules [ ./hosts/lorien/configuration.nix ];
   };
 
-  varda = nixpkgs.lib.nixosSystem {
-    modules = desktopModules [ ./hosts/varda/configuration.nix ];
-  };
-
   orome = nixpkgs.lib.nixosSystem {
     modules = desktopModules [ ./hosts/orome/configuration.nix ];
   };
@@ -105,7 +101,7 @@
 
   in {
     nixosConfigurations = {
-      inherit lorien varda orome ulmo manwe;
+      inherit lorien orome ulmo manwe;
     };
     homeConfigurations = {
     };
