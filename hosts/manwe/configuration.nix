@@ -27,7 +27,6 @@
     loader.efi.canTouchEfiVariables = true;
 
     initrd = {
-      systemd.enable = true;
       systemd.network = {
         enable = true;
         networks."10-wan" = {
