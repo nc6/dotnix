@@ -21,7 +21,7 @@
     };
     voxtype = {
       url = "github:peteonrails/voxtype";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
