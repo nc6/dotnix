@@ -31,21 +31,8 @@
 
   specialArgs = { inherit inputs; };
 
-  waybarOverlay = final: prev: {
-    waybar = prev.waybar.overrideAttrs (old: {
-      version = "0.15.0";
-      src = prev.fetchFromGitHub {
-        owner = "Alexays";
-        repo = "Waybar";
-        rev = "05945748dccce28bf96d26d8f64a9e69a8dd49ba";
-        hash = "sha256-51R3mIt8cLNvh/X5qe9vOqeJCj0U9KRyemVE5y+OhiU=";
-      };
-      mesonFlags = (old.mesonFlags or []) ++ [ "-Dcava=disabled" ];
-    });
-  };
-
   desktopModules = extraModules: [
-    { nixpkgs.hostPlatform.system = system; nixpkgs.overlays = [ waybarOverlay ]; }
+    { nixpkgs.hostPlatform.system = system; }
     ./hosts/common
     home-manager.nixosModules.home-manager
     {
