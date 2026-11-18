@@ -28,7 +28,6 @@
     spotify
     signal-desktop
     telegram-desktop
-    thunderbird
     # Disabled due to CVE-2023-5217
     # zotero
 
