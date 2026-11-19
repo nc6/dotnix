@@ -8,11 +8,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1795029898,
-        "narHash": "sha256-tKwJR+z7+vqo4h6bE7t+gQz9Wp9V+dol+Ujb+M12k2s=",
+        "lastModified": 1795049084,
+        "narHash": "sha256-MuPUn5MxLjkxWnrgXU0twZkxrtlTAquPFm+lWA5YTkI=",
         "ref": "refs/heads/master",
-        "rev": "caff250fad0830964a9c0387e8bd23e6c77fe29f",
-        "revCount": 680,
+        "rev": "ecc4e5a609a3356922c5ffa2a0275d5a00fbd10a",
+        "revCount": 701,
         "type": "git",
         "url": "ssh://git@github.com/nc6/bismuth.git"
       },
