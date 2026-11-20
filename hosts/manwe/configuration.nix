@@ -13,6 +13,8 @@
       ../common/nix.nix
       # Bismuth
       ./bismuth.nix
+      # Remote builder and binary cache for the other hosts
+      ./build-server.nix
       # Affine knowledge management
       # ./affine.nix
       # Immich photo management

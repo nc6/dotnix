@@ -9,6 +9,8 @@
       ./keyring.nix
       ./nix.nix
       ./packages.nix
+      # Build on and substitute from manwe
+      ./remote-builder.nix
       ./udev.nix
       ./users.nix
     ];
