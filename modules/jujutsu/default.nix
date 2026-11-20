@@ -19,8 +19,8 @@
         };
       };
 
-      git = {
-        sign-on-push = true;
+      revsets = {
+        git-sign-on-push = "~signed() & mine()";
       };
     } // builtins.fromTOML (builtins.readFile ./config.toml);
   };
