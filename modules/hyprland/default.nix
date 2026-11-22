@@ -19,6 +19,12 @@
           resize_on_border = true;
           layout = "dwindle";
         };
+        dwindle = {
+          # Once a split's orientation is set (automatically, or via
+          # togglesplit), keep it instead of re-deciding it from the
+          # container's aspect ratio whenever windows move or resize.
+          preserve_split = true;
+        };
       };
     };
     extraConfig = ''
@@ -51,6 +57,17 @@
       hl.bind(mod .. " + RIGHT",         hl.dsp.focus({ monitor = "r" }))
       hl.bind(mod .. " + SHIFT + LEFT",  hl.dsp.workspace.move({ monitor = "l" }))
       hl.bind(mod .. " + SHIFT + RIGHT", hl.dsp.workspace.move({ monitor = "r" }))
+
+      -- Dwindle split control:
+      --   S          flip the focused split (side-by-side <-> stacked)
+      --   SHIFT+S    swap the two halves of the focused split
+      --   CTRL+hjkl  preselect where the next window opens relative to the focused one
+      hl.bind(mod .. " + S",         hl.dsp.layout("togglesplit"))
+      hl.bind(mod .. " + SHIFT + S", hl.dsp.layout("swapsplit"))
+      hl.bind(mod .. " + CTRL + H",  hl.dsp.layout("preselect l"))
+      hl.bind(mod .. " + CTRL + J",  hl.dsp.layout("preselect d"))
+      hl.bind(mod .. " + CTRL + K",  hl.dsp.layout("preselect u"))
+      hl.bind(mod .. " + CTRL + L",  hl.dsp.layout("preselect r"))
 
       hl.bind(mod .. " + T",     hl.dsp.group.toggle())
       hl.bind(mod .. " + F",     hl.dsp.window.fullscreen())
