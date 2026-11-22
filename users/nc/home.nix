@@ -5,6 +5,7 @@
     (import ./headless.nix)
     (import ../../modules/1password.nix)
     (import ../../modules/hyprland)
+    (import ../../modules/opencode)
     (import ../../modules/i3status-rs.nix)
     (import ../../modules/rofi.nix)
     (import ../../modules/voxtype.nix)
