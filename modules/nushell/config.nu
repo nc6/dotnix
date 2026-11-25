@@ -8,3 +8,11 @@ $env.config.rm.always_trash = true
 $env.config.history.file_format = "sqlite"
 
 alias fg = job unfreeze
+
+# Separate Claude Code profile for work, with its own config dir (and so its
+# own login, settings, history and credentials).
+def --wrapped claude-yume [...args] {
+  with-env { CLAUDE_CONFIG_DIR: ($env.HOME | path join ".claude-yume") } {
+    ^claude ...$args
+  }
+}
